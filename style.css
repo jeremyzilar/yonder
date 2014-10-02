@@ -15,7 +15,7 @@ font-family: 'Lato', sans-serif;
 body {
   background: #FFFEF5;
   background: #fff;
-  background: #FFFEF5;
+  background: #FFFEF5 url('img/bluebg3.png') no-repeat;
   /*background:rgba(205,217,113,.2);*/
   font-family: 'Lato', sans-serif;
   font-size: 18px;
@@ -35,6 +35,12 @@ hr{
   margin:48px auto;
   width: 50%;
   border-bottom: 1px #ccc solid;
+}
+
+h1 {
+  margin:0 0 20px 0;
+  font-weight: 900;
+  text-shadow: 0 1px rgba(0,0,0,0.15);
 }
 
 h3 {
@@ -149,13 +155,20 @@ section{
 /*Head*/
 #head h1{
   margin:0 0 20px 0;
+  text-align: center;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 48px;
 }
 #head h1 img{
   margin-left:2px;
   width:150px;
 }
 #head h2 {
-  font-weight: 800;
+  margin:0;
+  font-weight: 400;
+  font-size: 21px;
+  text-align: center;
 }
 
 
