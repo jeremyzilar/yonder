@@ -117,7 +117,7 @@ function psfc_entry_meta($id) {
   $author = get_the_author();
   $author_user = get_the_author_meta( 'user_login' );
   $author_link = get_author_posts_url(get_the_author_meta( 'ID' ));
-	echo '<span class="author_img"><img src="'.TDIR.'/img/team/'.$author_user.'.png" alt="'.$author.'"> By '.$author.' | ';
+	echo '<span class="author_img"><img src="'.TDIR.'/img/'.$author_user.'.png" alt="'.$author.'"> By '.$author.' | ';
 
 	psfc_entry_date();
 
