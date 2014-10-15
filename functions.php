@@ -6,12 +6,8 @@ ini_set( 'max_execution_time', '300' );
 
 include_once 'functions/wp_enqueue_script.php';
 include_once 'functions/loop.php';
-include_once 'functions/images.php';
 include_once 'functions/related-link.php';
 include_once 'functions/kicker.php';
-
-include_once 'functions/timeline.php';
-include_once 'functions/steps.php';
 
 
 
@@ -175,8 +171,3 @@ function custom_excerpt_length( $length ) {
 	return 35;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-
-
-
-?>

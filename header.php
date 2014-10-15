@@ -32,7 +32,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-          <h1 contenteditable="true">Thread</h1>
+          <h1 contenteditable="true">Yonder</h1>
           <h2 contenteditable="true">The Key Fragments of World Narrative</h2>
         </div>
       </div>
