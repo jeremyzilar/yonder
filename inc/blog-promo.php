@@ -31,7 +31,7 @@
 									</p>
 									
 									<footer class="entry-meta">
-									  <?php psfc_entry_meta($post->ID); ?>
+									  <?php andrej_entry_meta($post->ID); ?>
 									</footer><!-- .entry-meta -->
 								</div>
 

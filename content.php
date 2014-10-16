@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
 	<header class="entry-header">
 
-		<?php psfc_the_kicker(); ?>
+		<?php andrej_the_kicker(); ?>
 
 		<?php if ( is_single() ) : ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -29,7 +29,7 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
-	  <?php psfc_entry_meta($post->ID); ?>
+	  <?php andrej_entry_meta($post->ID); ?>
 	</footer><!-- .entry-meta -->
 
 	<!-- Comments Start here -->

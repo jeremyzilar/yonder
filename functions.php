@@ -6,7 +6,7 @@ ini_set( 'max_execution_time', '300' );
 
 include_once 'functions/wp_enqueue_script.php';
 include_once 'functions/loop.php';
-include_once 'functions/related-link.php';
+// include_once 'functions/related-link.php';
 include_once 'functions/kicker.php';
 
 
@@ -53,11 +53,11 @@ add_theme_support( 'post-thumbnails' );
 
 
 // Register a Menu
-function psfc_register_menu() {
+function andrej_register_menu() {
   register_nav_menu('main-menu',__( 'Main Menu' ));
   register_nav_menu('footer-menu',__( 'Footer Menu' ));
 }
-add_action( 'init', 'psfc_register_menu' );
+add_action( 'init', 'andrej_register_menu' );
 
 
 // Nav Menu
@@ -88,7 +88,7 @@ if (!is_admin()) {
 
 
 
-function psfc_get_link_url() {
+function andrej_get_link_url() {
 	$has_url = get_the_post_format_url();
 	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
 }
@@ -106,8 +106,8 @@ function get_related(){
 }
 
 // Entry Meta
-if ( ! function_exists( 'psfc_entry_meta' ) ) :
-function psfc_entry_meta($id) {
+if ( ! function_exists( 'andrej_entry_meta' ) ) :
+function andrej_entry_meta($id) {
 
   
   $author = get_the_author();
@@ -115,7 +115,7 @@ function psfc_entry_meta($id) {
   $author_link = get_author_posts_url(get_the_author_meta( 'ID' ));
 	echo '<span class="author_img"><img src="'.TDIR.'/img/'.$author_user.'.png" alt="'.$author.'"> By '.$author.' | ';
 
-	psfc_entry_date();
+	andrej_entry_date();
 
 	if ( is_user_logged_in() ) {
 		$edit = get_edit_post_link($id);
@@ -133,7 +133,7 @@ function psfc_entry_meta($id) {
 endif;
 
 // CATEGORY
-function psfc_category(){
+function andrej_category(){
   if (!is_category()) {
     foreach((get_the_category()) as $category) {
       if ($category->cat_name !== 'Uncategorized') {
@@ -144,8 +144,8 @@ function psfc_category(){
 }
 
 // DATE
-if ( ! function_exists( 'psfc_entry_date' ) ) :
-function psfc_entry_date( $echo = true ) {
+if ( ! function_exists( 'andrej_entry_date' ) ) :
+function andrej_entry_date( $echo = true ) {
   $date = '<a class="date" href="'.get_permalink().'" title="'.the_title_attribute( 'echo=0' ).'" rel="bookmark"><time class="dt-published published entry-date rel_time" datetime="'.get_the_date('c').'"><span>'.get_the_time('F j, Y g:i a').'</span></time></a>';
   echo $date;
   return $date;

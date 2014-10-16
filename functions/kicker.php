@@ -1,13 +1,13 @@
 <?php
 
-define('PSFC_KICKER_META', '_psfc_kicker');
+define('andrej_KICKER_META', '_andrej_kicker');
 
-function psfc_kicker_meta() {
+function andrej_kicker_meta() {
 
 	$selected_item = '';
 
 	if(isset($_GET["post"])) {
-		$selected_item = get_post_meta( $_GET["post"], PSFC_KICKER_META, true );
+		$selected_item = get_post_meta( $_GET["post"], andrej_KICKER_META, true );
 	}
 
     if(empty($selected_item)) {
@@ -16,13 +16,13 @@ function psfc_kicker_meta() {
         $selected = '';
     }
 
-	$dropdown_items = psfc_get_kicker_dropdown();
+	$dropdown_items = andrej_get_kicker_dropdown();
 
 	if(!empty($dropdown_items)) {
 
 		 echo <<<EOF
 <div class="primary_kicker">
-<select name="psfc_kicker" id="psfc_kicker" style="width:250px;">
+<select name="andrej_kicker" id="andrej_kicker" style="width:250px;">
 <option value="" $selected>Select Primary Kicker</option>
 EOF;
 
@@ -46,11 +46,11 @@ EOF;
 </div>
 EOF;
 
-		wp_nonce_field( 'psfc-kicker-nonce', 'psfc_kicker_nonce', false );
+		wp_nonce_field( 'andrej-kicker-nonce', 'andrej_kicker_nonce', false );
 	}
 }
 
-function psfc_get_kicker_save($post_id) {
+function andrej_get_kicker_save($post_id) {
 
 	if ( wp_is_post_revision( $post_id ) || wp_is_post_autosave( $post_id ) )
 		return $post_id;
@@ -59,26 +59,26 @@ function psfc_get_kicker_save($post_id) {
 		return $post_id;
 
 	// Checks to make sure we came from the right page
-	if ( !wp_verify_nonce( $_POST['psfc_kicker_nonce'], 'psfc-kicker-nonce' ) )
+	if ( !wp_verify_nonce( $_POST['andrej_kicker_nonce'], 'andrej-kicker-nonce' ) )
 		return $post_id;
 
 	// Checks user caps
 	if ( !current_user_can( 'edit_post', $post_id ) )
 		return $post_id;
 
-	update_post_meta($post_id, PSFC_KICKER_META, $_POST["psfc_kicker"], get_post_meta( $post_id, PSFC_KICKER_META, true ));
+	update_post_meta($post_id, andrej_KICKER_META, $_POST["andrej_kicker"], get_post_meta( $post_id, andrej_KICKER_META, true ));
 
 	return $post_id;
 }
 
-function psfc_get_kicker_dropdown() {
+function andrej_get_kicker_dropdown() {
 	return get_terms('category', array(	'fields'     => 'names',
 										'orderby'    => 'name',
 										'hide_empty' => 0)
 					);
 }
 
-function psfc_get_kicker($post_id = 0, $default = false) {
+function andrej_get_kicker($post_id = 0, $default = false) {
 
     $post_id = (int) $post_id;
 
@@ -92,15 +92,15 @@ function psfc_get_kicker($post_id = 0, $default = false) {
             return '';
     }
 
-	return get_post_meta( $post_id, PSFC_KICKER_META, true );
+	return get_post_meta( $post_id, andrej_KICKER_META, true );
 }
 
-function psfc_the_kicker($img = true) {
+function andrej_the_kicker($img = true) {
 	$p_id = get_the_ID();
 	if(empty($p_id))
 		return;
 
-    $kicker = psfc_get_kicker();
+    $kicker = andrej_get_kicker();
 		$status = get_post_status();
 		$s = '<span class="status-label">' . $status . '</span>';
 		if ($status !== 'draft') {
@@ -128,10 +128,10 @@ function add_kicker_meta_box() {
   $types = array( 'post', 'artwork', 'page', 'code' );
 
   foreach( $types as $type ) {
-    add_meta_box( 'psfc_kicker_div', 'Kicker', 'psfc_kicker_meta', $type, 'side', 'high');
+    add_meta_box( 'andrej_kicker_div', 'Kicker', 'andrej_kicker_meta', $type, 'side', 'high');
   }
 
 }
-add_action('save_post', 'psfc_get_kicker_save', 0);
+add_action('save_post', 'andrej_get_kicker_save', 0);
 add_action('add_meta_boxes', 'add_kicker_meta_box');
 ?>

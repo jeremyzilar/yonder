@@ -85,6 +85,4 @@ function cd_meta_box_save( $post_id )
 	update_post_meta( $post_id, 'my_meta_box_check', $chk );
 }
 
-
-
 ?>
