@@ -5,8 +5,7 @@ function related_link_add() {
 	add_meta_box( 'related-link-id', 'Related Link', 'related_link', 'post', 'normal', 'high' );
 }
 
-function related_link( $post )
-{
+function related_link( $post ){
 	$values = get_post_custom( $post->ID );
 	$source = isset( $values['related_link_source'] ) ? esc_attr( $values['related_link_source'][0] ) : '';
 	$url = isset( $values['related_link_url'] ) ? esc_attr( $values['related_link_url'][0] ) : '';
@@ -84,5 +83,3 @@ function cd_meta_box_save( $post_id )
 	$chk = ( isset( $_POST['my_meta_box_check'] ) && $_POST['my_meta_box_check'] ) ? 'on' : 'off';
 	update_post_meta( $post_id, 'my_meta_box_check', $chk );
 }
-
-?>
