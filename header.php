@@ -27,14 +27,5 @@
   </head>
   <body <?php body_class(); ?>>
 
-
-  <section id="head">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-          <h1>Yonder</h1>
-          <h2>The Key Fragments of World Narrative</h2>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Header -->
+    <?php include(INC . '/head.php'); ?>
