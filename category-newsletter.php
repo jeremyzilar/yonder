@@ -2,8 +2,8 @@
 	<section id="blog">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-					<?php loop(); ?>
+				<div class="col-xs-12">
+					<?php loop($limit='1'); ?>
 				</div>
 			</div>
 		</div>

@@ -7,7 +7,7 @@ ini_set( 'max_execution_time', '300' );
 include_once 'functions/wp_enqueue_script.php';
 include_once 'functions/loop.php';
 include_once 'functions/kicker.php';
-// include_once 'functions/related-link.php';
+include_once 'functions/related-link.php';
 
 
 
@@ -83,7 +83,15 @@ if (!is_admin()) {
 			return $query;
 		}
 	}
+}
 
+
+function date_marker(){
+	// Date Marker
+	$post_date = the_date('l F j, Y', '', '', FALSE); // returns the_date
+	if (!empty($post_date)) {
+		echo '<div class="date-hed"><h5>'.$post_date.'</h5></div>';
+	}
 }
 
 
@@ -97,9 +105,11 @@ function andrej_get_link_url() {
 
 // Related
 function get_related(){
+  $newsletter = get_post_meta( get_the_ID(), 'related_link_newsletter', true );
   $source = get_post_meta( get_the_ID(), 'related_link_source', true );
   $url = get_post_meta( get_the_ID(), 'related_link_url', true );
 	$related = '<p class="via"><img src="http://www.google.com/s2/favicons?domain='.$url.'"/><a href="'.$url.'" title="'.$source.'"><strong>'.$source.'</strong> '.substr($url,0,35).'...';$url.'</a></p>';
+
 	if (!empty($url)) {
 		return $related;
 	}

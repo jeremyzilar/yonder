@@ -15,6 +15,7 @@ font-family: 'Lato', sans-serif;
 body {
   background: #FFFEF5;
   background: #fff;
+  background: #F8F7EE;
   /*background: #FFFEF5 url('img/bluebg3.png') no-repeat;*/
   /*background:rgba(205,217,113,.2);*/
   font-family: 'Lato', sans-serif;
@@ -198,33 +199,30 @@ section{
 
 
 
-.date-hed{
-  margin: 20px 0;
-}
+
 
 /*ENTRY // Blog Posts*/
-
+#blog .container{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 800px;
+  background: #fff;
+}
+.date-hed{
+  margin:0 0 60px 0;
+}
 .entry{
   margin:0 0 35px 0;
   padding:15px 0;
-  border-top: 1px #ccc solid;
+  color:#686868;
 }
-.single .entry,
-.page .entry{
-  border-top: none; 
-}
-.entry:first-child{
-  margin-top:0;
-  border-top: none; 
-  /*padding-top:0;*/
+.entry-summary{
+  font-family: 'Palentino', Georgia, serif;
 }
 .entry .entry-summary p{
   margin-bottom: 15px;
 }
 .entry-summary .more{
-  display: block;
-}
-.home .entry-summary{
   display: block;
 }
 .single .entry-summary,
@@ -235,6 +233,7 @@ section{
   font-size:21px;
   line-height:30px;
   display: none;
+  font-family: 'Palentino', Georgia, serif;
 }
 .single .entry-content,
 .page .entry-content{
@@ -274,10 +273,10 @@ section{
   font-size:21px;
   font-family: 'Lato', sans-serif;
   font-weight:900;
+  color:#505050;
 }
 .entry-title a{
-  color:#1E3558;
-  color:#2d2d2d;
+  color:#505050;
   text-decoration: none;
 }
 
@@ -302,6 +301,7 @@ section{
   color:#9c9999;
   font-size:13px;
   font-family: 'Lato', sans-serif;
+  display: none;
 }
 .entry-meta .author,
 .entry-meta .date{

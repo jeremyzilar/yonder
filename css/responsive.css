@@ -73,95 +73,6 @@ SM
   	font-size: 16px;
 	}
 
-
-	/*Step*/
-	.step{
-		padding: 20px 20px 25px 20px;
-	}
-	.step p{
-		width:80%;
-		font-size: 21px;
-	}
-	.step .lead{
-		font-size: 30px;
-	}
-	.step span{
-		/*display: block;*/
-	}
-	.step blockquote{
-		/*padding: 10px 100px;*/
-	}
-
-	#process-promo .step h5{
-  	font-size: 24px;
-	}
-	#process-promo .step p{
-		font-size: 24px;
-	}
-	#process-promo p{
-  	font-size: 28px;
-	}
-	
-	#process-promo .btn-learn {
-		display: inline-block;
-	}
-	
-	/*Survey MSG*/
-	#survey-msg p{
-	  font-size: 24px;
-	}
-	#survey-msg h3{
-	  font-size:60px;
-	  font-weight: 700;
-	}
-	#survey-msg h3 a{
-		padding-bottom: 3px;
-	}
-	#survey-msg h3 a:hover{
-  	border-bottom: 5px #fff solid;
-	}
-	#survey-msg h3 img{
-  margin-top: -15px;
-  margin-left: 10px;
-  width: 45px;
-	}
-
-	.mailing-list{
-	  text-align: center;
-	}
-	
-	.mailing-list h5{
-	  font-size: 28px;
-	  font-weight: 700;
-	}
-
-	.mailing-list .email{
-  	width:485px;
-	}
-
-	#social{}
-	#social p{
-		font-size: 31px;
-	}
-	#social p i{
-		top:10px;
-		left: -10px;
-	}
-	#social p a{
-		font-size: 30px;
-	}
-	#social p strong{
-		font-weight: 500;
-	}
-
-	#blog-promo .btn-learn {
-		display: inline-block;
-	}
-	#blog-promo .blog-icon{
-	  border-left: 60px solid transparent;
-	  border-right: 60px solid transparent;
-	  border-top: 50px solid rgba(43,160,90,1);
-	}
 	#blog .entry-summary{
 		/*display: hidden;*/
 	}
@@ -171,11 +82,10 @@ SM
 
 	.entry{
 	  margin:0 0 48px 0;
-	  padding:15px 0;
+	  padding:15px 15%;
 	}
 	.entry-title{
 		margin-bottom:15px;
-	  font-size:28px;
 	}
 }
 

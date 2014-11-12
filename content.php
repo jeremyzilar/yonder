@@ -1,4 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+	
+	<?php date_marker(); ?>
+
 	<header class="entry-header">
 
 		<?php andrej_the_kicker(); ?>
@@ -10,6 +13,7 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h3>
 		<?php endif; // is_single() ?>
+		
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
