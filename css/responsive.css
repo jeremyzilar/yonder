@@ -4,30 +4,7 @@ XS
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 */
 @media screen and (max-width: 767px) {
-	#hero{
-  	min-height: 400px;
-	}
-	.webonly{
-		display: none !important;
-	}
-	#blog .entry-summary{
-		display: block;
-	}
-	.single #blog .entry-summary,
-	.page #blog .entry-summary{
-		display: none;
-	}
-	#blog .entry-content{
-		display: none;
-	}
-	.single #blog .entry-content,
-	.page #blog .entry-content{
-		display: block;
-	}
 
-	.mailing-list .btn{
-  	width:100%;
-	}
 
 }
 
@@ -37,56 +14,22 @@ SM
 */
 @media screen and (min-width: 768px) {
 	
-	section{
-  	padding:60px 0;
+	#newsletter-promo .triangle{
+  	margin: 0 0 0 60px;
 	}
-
- 	h4{
-	  font-size:30px;
-	  font-weight: 900;
+	#newsletter-promo .box{
+  	padding:30px 15% 30px 15%; 
 	}
-
-	#hero{
-  	/*padding:60px 0;*/
-	}
-	#hero h1 img{
-  	margin:0 auto;
-  	width:210px;
-	}
-	#hero h2{
-		margin-top:1.2em;
-		font-size: 50px;
-		font-weight: 900;
-	}
-	#head-short h1{
-		margin-top: 3px;
-		margin-bottom: 20px;
-	}
-	#head-short h2{
-		margin:0 0 0 24px;
+	#newsletter-promo .box h3{
 		font-size: 24px;
-		font-weight: 800;
-		text-shadow: 0px 0px 20px rgba(0,0,0,1);
 	}
-	/*Navbar*/
-	.navbar li{
-  	font-size: 16px;
+	#newsletter-promo .box .mailing-list-box input{
+		width:auto;
 	}
+	#newsletter-promo .box .mailing-list-box .email{
+  	width:444px;
+	}	
 
-	#blog .entry-summary{
-		/*display: hidden;*/
-	}
-	.home .entry-summary{
-	  display: block;
-	}
-
-	.entry{
-	  margin:0 0 48px 0;
-	  padding:15px 15%;
-	}
-	.entry-title{
-		margin-bottom:15px;
-	}
 }
 
 /*

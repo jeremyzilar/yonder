@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+	<?php include(INC . '/newsletter-promo.php'); ?>
 	<section id="blog">
 		<div class="container">
 			<div class="row">
