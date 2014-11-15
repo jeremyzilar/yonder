@@ -120,9 +120,7 @@ section{
 
 
 /*HEAD*/
-#head{
-
-}
+#head{}
 #head h1{
   margin:0 0 20px 0;
   text-align: center;
@@ -130,9 +128,11 @@ section{
   font-size: 42px;
   line-height: 48px;
 }
-#head h1 img{
-  margin-left:2px;
-  width:150px;
+#head h1 a{
+  color:#444;
+}
+#head h1 a:hover{
+  text-decoration: none;
 }
 #head h2 {
   margin:0;
@@ -140,30 +140,6 @@ section{
   font-size: 21px;
   text-align: center;
 }
-
-
-/*HEAD Short*/
-#head-short{
-  background-image: url('img/art/cheese.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  padding:20px 0;
-}
-#head-short h1{
-  margin:0 auto;
-  width:80px;
-}
-#head-short h1 img {background-color: rgba(0,0,0,0.5);}
-#head-short h2{
-  margin:18px 0 0 0;
-  font-size:18px;
-  font-weight: 800;
-  text-shadow: 0 3px rgba(0,0,0,0.15);
-  color:#fff;
-  text-align: center;
-}
-
 
 
 
