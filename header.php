@@ -29,3 +29,6 @@
 
     <!-- Header -->
     <?php include(INC . '/head.php'); ?>
+
+    <!-- Newsletter -->
+    <?php include(INC . '/newsletter-promo.php'); ?>
