@@ -10,28 +10,10 @@
     // };
     // scroll();
 
-    $wh = $(window).height();
-    $ww = $(window).width();
-    $('#hero').height($wh - 450).width($ww);
-    $( window ).resize(function() {
-      $wh = $(window).height();
-      $ww = $(window).width();
-      $('#hero').height($wh - 450).width($ww);
-    });
-
-
-
-
-    $('#process-promo .step').click(function(e) {
-        e.preventDefault();
-        var url = $('#process-promo').attr('data-url');
-        if (url === undefined) { return false; }
-        window.location = url;
-    });
-
-
-    $('.mailing-list .form-control').focus(function() {
-      $('.form-group').show('fast');
+    $('#newsletter-promo .close').click(function(e) {
+      e.preventDefault();
+      $('#newsletter-promo').slideUp(100);
+      
     });
 
 
