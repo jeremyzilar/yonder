@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<?php loop($limit='1'); ?>
+					<?php loop(); ?>
 				</div>
 			</div>
 		</div>

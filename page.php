@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 	<section id="blog">
-		<?php loop($limit=''); ?>
+		<?php loop(); ?>
 	</section>
 <?php get_footer(); ?>
