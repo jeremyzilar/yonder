@@ -27,6 +27,22 @@ define('INC', $inc);
 
 
 
+function yonder_setcookie() {
+  // setcookie( 'yonder_newvisitor', 'my-value', time() + 3600, COOKIEPATH, COOKIE_DOMAIN );
+  $expires = time() + 10 ;
+	setcookie('yonder_newvisitor', '', $expires, '/');
+}
+add_action( 'init', 'yonder_setcookie' );
+
+
+function yonder_getcookie() {
+   $yonder_newvisitor = isset( $_COOKIE['yonder_newvisitor'] ) ? $_COOKIE['yonder_newvisitor'] : '';
+   return $yonder_newvisitor;
+}
+add_action( 'wp_head', 'yonder_getcookie' );
+$newvisitor = yonder_getcookie();
+
+
 // The Common Grid — used in multiple places
 // $grid = 'entry-box col-lg-10 col-md-8 col-sm-9 col-md-offset-1 col-sm-offset-1';
 $grid = 'entry-box col-xs-12 col-sm-8 col-sm-offset-2';
@@ -68,6 +84,12 @@ function special_nav_class($classes, $item){
 	}
 	return $classes;
 }
+
+
+
+
+
+
 
 
 
