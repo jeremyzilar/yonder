@@ -30,6 +30,7 @@
 			<?php the_content(); ?>
 			<?php echo get_related(); ?>
 		</div><!-- .entry-content -->
+
 	<?php endif; ?>
 
 	<footer class="entry-meta">
