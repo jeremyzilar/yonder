@@ -148,16 +148,19 @@ section{
 
 /*ENTRY // Blog Posts*/
 #blog{
-  margin: 20px 0;
+  margin:0;
   padding:0;
 }
 #blog .container{
   margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 800px;
+  max-width: 800px;
   background: #fff;
   border-bottom: 2px #dedede solid;
+}
+#blog .container:last-child{
+  margin-bottom: 0;
 }
 .date-hed{
   margin:0 0 50px 0;
@@ -168,7 +171,7 @@ section{
 }
 .entry{
   margin:0;
-  padding:30px 15% 30px 15%; 
+  padding:30px 0 30px 0; 
   color:#686868;
   background: #fff;
 }
@@ -301,6 +304,7 @@ section{
 
 /*Newsletter Promo*/
 #newsletter-promo{
+  margin-bottom: 20px;
   padding: 0;
 }
 #newsletter-promo .container{
@@ -386,6 +390,32 @@ section{
 #newsletter-promo .box .mailing-list-box .btn-submit:hover{
   background: #444;
 }
+
+
+
+/*Mission Box*/
+#mission-box{
+  padding:0; 
+}
+#mission-box .container{
+  padding-left:0;
+  max-width: 800px;
+  background: #444;
+  color:#fff;
+  position: relative;
+  border-bottom:2px #222 solid;
+}
+#mission-box .mission-photo{
+  padding-right: 0;
+}
+#mission-box .mission-txt{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#mission-box .mission-txt h4{
+  font-size: 16px;
+}
+
 
 
 /*Footer*/

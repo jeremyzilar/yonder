@@ -32,3 +32,6 @@
 
     <!-- Newsletter -->
     <?php include(INC . '/newsletter-promo.php'); ?>
+
+    <!-- Mission Box -->
+    <?php //include(INC . '/mission-box.php'); ?>

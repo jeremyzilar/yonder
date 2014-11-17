@@ -1,4 +1,6 @@
-
+  <!-- Mission Box -->
+  <?php include(INC . '/mission-box.php'); ?>
+  
   <section id="footer">
     <div class="container">
       <div class="row">

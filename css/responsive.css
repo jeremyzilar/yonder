@@ -37,7 +37,9 @@ Tablets/desktops and up
 MD
 */
 @media screen and (min-width: 992px) {
-
+	.entry{
+		padding:30px 15% 30px 15%;
+	}
 	
 }
 
