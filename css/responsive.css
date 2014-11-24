@@ -18,7 +18,8 @@ SM
   	margin: 0 0 0 60px;
 	}
 	#newsletter-promo .box{
-  	padding:30px 15% 30px 15%; 
+		/*margin: 50px 0;*/
+  	/*padding:30px 15% 30px 15%; */
 	}
 	#newsletter-promo .box h3{
 		font-size: 24px;
@@ -38,7 +39,7 @@ MD
 */
 @media screen and (min-width: 992px) {
 	.entry{
-		padding:30px 15% 30px 15%;
+		/*padding:30px 15% 30px 15%;*/
 	}
 	
 }
