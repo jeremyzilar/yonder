@@ -121,7 +121,7 @@ section{
 
 /*HEAD*/
 #head{
-  padding: 150px 0;
+  padding: 115px 0;
   background: #444;
   background: #F16B6D;
   /*background: #f15849;*/
@@ -139,8 +139,13 @@ section{
   width: 100%;
   display: none;
 }
+#head .logo{
+  margin-left: -20px;
+  margin-bottom: 5px;
+  width: 180px;
+}
 #head h1{
-  margin:0 0 80px 0;
+  margin:0 0 75px 0;
   font-weight: 500;
   font-size: 90px;
   font-family: "chippewa-falls";
@@ -180,6 +185,7 @@ section{
 #social a{
   margin-right: 5px;
   color:#efefef;
+  font-size: 21px;
   -webkit-transition: all 0.15s ease-in-out;
      -moz-transition: all 0.15s ease-in-out;
        -o-transition: all 0.15s ease-in-out;
@@ -407,14 +413,14 @@ section{
 }
 
 #newsletter-promo .box h3{
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-size: 21px;
 }
 #newsletter-promo .box h3 i{
   margin-right: 3px;
 }
 #newsletter-promo .box .mailing-list-box{
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 #newsletter-promo .box .mailing-list-box label{
   display: none;
@@ -422,6 +428,24 @@ section{
 #newsletter-promo .box .mailing-list-box input{
   width:100%;
 }
+#newsletter-promo .email,
+#newsletter-promo .email:focus{
+  border:none;
+  color:#F16B6D;
+}
+#newsletter-promo .email::-webkit-input-placeholder { /* WebKit browsers */
+  color:#F16B6D;
+}
+#newsletter-promo .email:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:#F16B6D;
+}
+#newsletter-promo .email::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:#F16B6D;
+}
+#newsletter-promo .email:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:#F16B6D;
+}
+
 #newsletter-promo .box .mailing-list-box .btn-submit{
   background: #555;
   color:#fff;
