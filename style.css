@@ -140,19 +140,19 @@ section{
   display: none;
 }
 #head .logo{
-  margin-left: -20px;
+  margin-left: -5px;
   margin-bottom: 5px;
-  width: 180px;
+  width: 150px;
 }
 #head h1{
-  margin:0 0 75px 0;
+  margin:0 0 50px 0;
   font-weight: 500;
-  font-size: 90px;
+  font-size: 68px;
   font-family: "chippewa-falls";
   font-family: "jubilat";
   font-family: "livory";
   /*font-family: "brandon-grotesque";*/
-  line-height: 90px;
+  line-height: 75px;
   text-transform: lowercase;
 }
 #head h1 a{
@@ -171,6 +171,9 @@ section{
   font-weight: 300;
   font-size: 24px;
 }
+#head h3 span{
+  display: inline;
+}
 
 #head h3 a{
   color:#fff;
@@ -185,7 +188,7 @@ section{
 #social a{
   margin-right: 5px;
   color:#efefef;
-  font-size: 21px;
+  font-size: 24px;
   -webkit-transition: all 0.15s ease-in-out;
      -moz-transition: all 0.15s ease-in-out;
        -o-transition: all 0.15s ease-in-out;
@@ -448,6 +451,7 @@ section{
 
 #newsletter-promo .box .mailing-list-box .btn-submit{
   background: #555;
+  background: #5098f1;
   color:#fff;
   -webkit-transition: all 0.15s ease-in-out;
      -moz-transition: all 0.15s ease-in-out;
@@ -456,6 +460,7 @@ section{
 }
 #newsletter-promo .box .mailing-list-box .btn-submit:hover{
   background: #444;
+  background: #427fcb;
 }
 
 
