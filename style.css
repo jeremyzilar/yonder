@@ -16,6 +16,7 @@ body {
   background: #FFFEF5;
   background: #fff;
   background: #F8F7EE;
+  /*background: #f8f7dd;*/
   /*background: #FFFEF5 url('img/bluebg3.png') no-repeat;*/
   /*background:rgba(205,217,113,.2);*/
   font-family: 'Lato', sans-serif;
@@ -148,12 +149,13 @@ section{
   margin:0 0 50px 0;
   font-weight: 500;
   font-size: 68px;
-  font-family: "chippewa-falls";
-  font-family: "jubilat";
+  /*font-family: "chippewa-falls";*/
+  /*font-family: "jubilat";*/
   font-family: "livory";
   /*font-family: "brandon-grotesque";*/
   line-height: 75px;
   text-transform: lowercase;
+  /*text-transform: capitalize;*/
 }
 #head h1 a{
   color:#fff;
@@ -199,7 +201,6 @@ section{
 }
 
 
-
 /*ENTRY // Blog Posts*/
 #blog{
   margin:0;
@@ -209,7 +210,6 @@ section{
   margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px #dedede solid;
 }
 #blog .container:last-child{
   margin-bottom: 0;
@@ -220,31 +220,30 @@ section{
 .date-hed h5{
   margin: 0;
   color:#999;
+  font-family: 'Lato', sans-serif;
+  /*font-family: 'freight-text-pro', 'Palentino', Georgia, serif;*/
 }
 .entry{
   margin:0;
   padding:30px 0 30px 0; 
   color:#686868;
-}
-.entry-summary{
-  font-family: 'Palentino', Georgia, serif;
+  font-family: 'freight-text-pro', 'Palentino', Georgia, serif;
 }
 .entry .entry-summary p{
   margin-bottom: 15px;
 }
 .entry-summary .more{
   display: block;
-  font-family: 'Lato', sans-serif;
 }
 .single .entry-summary,
 .page .entry-summary{
   display: none;
 }
+.entry-summary,
 .entry-content{
-  font-size:21px;
-  line-height:30px;
-  display: none;
-  font-family: 'Palentino', Georgia, serif;
+  font-size:18px;
+  line-height:28px;
+  letter-spacing: 0.01em;
 }
 .single .entry-content,
 .page .entry-content{
@@ -253,8 +252,6 @@ section{
 
 .entry p{
   margin-bottom: 21px;
-  font-size:21px;
-  line-height:32px;
 }
 
 .entry-content ul,
@@ -264,8 +261,6 @@ section{
 }
 .entry-content li{
   margin-bottom: 10px;
-  font-size: 18px;
-  line-height: 25px;
 }
 
 
@@ -273,6 +268,7 @@ section{
   margin:0 0 10px 0;
   font-size:14px;
   font-weight:400;
+  font-family: 'Lato', sans-serif;
 }
 .entry .kicker a,
 .entry .kicker a:hover{
@@ -280,15 +276,31 @@ section{
 }
 .entry-title{
   margin-top:0;
-  margin-bottom:16px;
-  font-size:24px;
+  margin-bottom:18px;
+  font-size:21px;
   font-family: 'Lato', sans-serif;
-  font-weight:900;
-  color:#505050;
+  /*font-family: "livory";*/
+  /*font-family: "brandon-grotesque";*/
+  font-weight:600;
+  font-weight:500;
+  color:#121212;
+  text-shadow:none;
 }
 .entry-title a{
   color:#505050;
+  color:#5098f1;
+  color:#3f7bc3;
+  color:#121212;
   text-decoration: none;
+  border-bottom: 1px #F8F7EE solid;
+  -webkit-transition: all 0.15s ease-in-out;
+     -moz-transition: all 0.15s ease-in-out;
+       -o-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out;
+}
+.entry-title a:hover{
+  border-bottom: 1px #121212 solid;
+  /*text-decoration: underline;*/
 }
 
 
