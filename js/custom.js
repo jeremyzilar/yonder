@@ -2,6 +2,13 @@
   jQuery(document).ready(function() {
 
 
+    // $wh = $(window).height();
+    // $('#head').height($wh);
+    // $( window ).resize(function() {
+    //   $wh = $(window).height();
+    //   $('#head').height($wh);
+    // });
+
     // function scroll(){
     //   var h = $('#head').height();
     //   console.log(h);
