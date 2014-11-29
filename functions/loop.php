@@ -2,10 +2,17 @@
 
 function loop(){
 	$i = 0;
+	$url = esc_url( home_url( '/' ) );
+	$title = esc_attr( get_bloginfo( 'name', 'display' ) );
+	$homelink = '';
+	if (!is_home()) {
+		$homelink = '<h5 class="home-link"><a href="'.$url.'" title="'.$title.' Home"><i class="fa fa-arrow-left"></i> Home</a></h5>';
+	}
 	$start = <<< EOF
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-10">
+			$homelink
 EOF;
 	$end = <<< EOF
 		</div>

@@ -510,9 +510,18 @@ section{
 
 
 
+
+
 #nextprev{
   padding: 0;
 }
+
+
+#mission-box{
+  background: #333;
+  color:#fff;
+}
+
 
 /*Footer*/
 #footer{
