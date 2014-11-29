@@ -59,6 +59,9 @@ h4 {
   text-shadow: 0 2px rgba(0,0,0,0.15);
 }
 
+h5{
+  font-family: 'Lato', sans-serif;
+}
 h6 {
   margin:0 0 15px 0;
   font-size: 14px;
@@ -214,14 +217,22 @@ section{
 #blog .container:last-child{
   margin-bottom: 0;
 }
+
+.home-link{
+  margin-bottom: 25px;
+}
 .date-hed{
   margin:0 0 50px 0;
 }
 .date-hed h5{
   margin: 0;
-  color:#999;
+  color:#777;
   font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
   /*font-family: 'freight-text-pro', 'Palentino', Georgia, serif;*/
+}
+.date-hed h5 a{
+  text-decoration: none;
 }
 .entry{
   margin:0;
@@ -291,6 +302,7 @@ section{
   color:#5098f1;
   color:#3f7bc3;
   color:#121212;
+  color:#333;
   text-decoration: none;
   border-bottom: 1px #F8F7EE solid;
   -webkit-transition: all 0.15s ease-in-out;
@@ -324,7 +336,26 @@ section{
   color:#9c9999;
   font-size:13px;
   font-family: 'Lato', sans-serif;
-  display: none;
+}
+
+.tags-list{
+  margin-bottom: 20px;
+}
+
+.share-buttons{
+  margin-right: 8px;
+  display: inline;
+  font-size: 18px;
+}
+.share-buttons a{
+  color:#999;
+  -webkit-transition: color 0.15s ease-in-out;
+     -moz-transition: color 0.15s ease-in-out;
+       -o-transition: color 0.15s ease-in-out;
+          transition: color 0.15s ease-in-out;
+}
+.share-buttons a:hover{
+  color:#3f7bc3;
 }
 .entry-meta .author,
 .entry-meta .date{
@@ -332,7 +363,10 @@ section{
   color:#9c9999;
 }
 
-.entry-meta .author_img{}
+.entry-meta .author_img{
+  top: -1px;
+  position: relative;
+}
 .entry-meta .author_img img{
   margin-right: 3px;
   width:40px;
@@ -342,8 +376,7 @@ section{
 }
 
 .btn-edit{
-  margin-left:5px;
-  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
 }
 
 /*IMAGES*/

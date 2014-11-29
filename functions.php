@@ -107,12 +107,15 @@ if (!is_admin()) {
 	}
 }
 
-
 function date_marker(){
 	// Date Marker
 	$post_date = the_date('l F j, Y', '', '', FALSE); // returns the_date
+	$year  = get_the_time('Y'); 
+	$month = get_the_time('m'); 
+	$day   = get_the_time('d');
+	$archiveurl = get_day_link( $year, $month, $day );
 	if (!empty($post_date)) {
-		echo '<div class="date-hed"><h5>'.$post_date.'</h5></div>';
+		echo '<div class="date-hed"><h5><a href="'.$archiveurl.'"><i class="fa fa-globe"></i> '.$post_date.'</a></h5></div>';
 	}
 }
 
@@ -137,32 +140,35 @@ function get_related(){
 	}
 }
 
-// Entry Meta
-if ( ! function_exists( 'andrej_entry_meta' ) ) :
-function andrej_entry_meta($id) {
+function andrej_share_buttons() {
+	$twitter = '<a href="http://twitter.com/andrejmrevlje" title="Follow Andrej Mrevlje on Twitter"><i class="fa fa-twitter"></i></a>';
+	$facebook = '<a href="http://facebook.com/" title="Subscribe to Yonder from Andrej Mrevlje on Facebook"><i class="fa fa-facebook"></i></a>';
+	echo '<div class="share-buttons">' . $twitter . ' ' . $facebook . '</div>';
+}
 
-  
+
+// Entry Meta
+function andrej_entry_meta($id) {
+	$tag_list = get_the_tag_list('', ', ', '');
+	if ( $tag_list ) {
+		echo ' <div class="tags-list">' . $tag_list . '</div>';
+	}
+
   $author = get_the_author();
   $author_user = get_the_author_meta( 'user_login' );
   $author_link = get_author_posts_url(get_the_author_meta( 'ID' ));
-	echo '<span class="author_img"><img src="'.TDIR.'/img/'.$author_user.'.png" alt="'.$author.'"> By '.$author.' | ';
+
+  andrej_share_buttons();
+
+	echo '<span class="author_img"><img class="hidden" src="'.TDIR.'/img/'.$author_user.'.png" alt="'.$author.'"> By '.$author.' | ';
 
 	andrej_entry_date();
 
 	if ( is_user_logged_in() ) {
 		$edit = get_edit_post_link($id);
-		echo '<a href="'.$edit.'" class="btn-edit btn btn-xs btn-primary">edit</a>';
-	}
-
-	if (is_single()){
-		// Translators: used between list items, there is a space after the comma.
-		$tag_list = get_the_tag_list( '', __( ', ', 'twentythirteen' ) );
-		if ( $tag_list ) {
-			echo ' <span class="tags-links pull-right">' . $tag_list . '</span>';
-		}
+		echo ' | <a href="'.$edit.'" class="btn-edit">edit</a>';
 	}
 }
-endif;
 
 // CATEGORY
 function andrej_category(){

@@ -1,5 +1,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
-	
+
+	<?php if ( !is_home() ){
+		echo '<h5 class="home-link"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).' Home"><i class="fa fa-arrow-left"></i> Home</a></h5>';
+	} ?>
 	<?php date_marker(); ?>
 
 	<header class="entry-header">
@@ -21,10 +24,6 @@
 			<p><?php entry_excerpt(); ?></p>
 		</div><!-- .entry-summary -->
 	<?php else : ?>
-		
-		<div class="entry-summary">
-			<p><?php entry_excerpt(); ?></p>
-		</div><!-- .entry-summary -->
 
 		<div class="entry-content">
 			<?php the_content(); ?>
