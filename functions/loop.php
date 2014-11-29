@@ -4,15 +4,12 @@ function loop(){
 	$i = 0;
 	$url = esc_url( home_url( '/' ) );
 	$title = esc_attr( get_bloginfo( 'name', 'display' ) );
-	$homelink = '';
-	if (!is_home()) {
-		$homelink = '<h5 class="home-link"><a href="'.$url.'" title="'.$title.' Home"><i class="fa fa-arrow-left"></i> Home</a></h5>';
-	}
+	$homelink = '<h5 class="home-link"><a href="'.$url.'" title="'.$title.' Home"><i class="fa fa-arrow-left"></i> Home</a></h5>';
+	$current_tag = '<h4 class="tag-title"><i class="fa fa-tag"></i> ' . single_tag_title('', false) . '</h4>';
 	$start = <<< EOF
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-10">
-			$homelink
 EOF;
 	$end = <<< EOF
 		</div>
@@ -28,7 +25,13 @@ EOF;
 			    if ($day_check != '') {
 			      echo $end;
 			    }
-			  echo $start;
+				  echo $start;
+				  if ($i==0 && !is_home()) {
+				  	echo $homelink;
+				  }
+				  if (is_tag() && $i==0) {
+				  	echo $current_tag;
+				  }
 			  }
 			get_template_part('content', get_post_format());
 			$day_check = $day;

@@ -54,9 +54,8 @@ h3 {
 
 h4 {
   margin:0 0 25px 0;
-  font-weight: 900;
+  font-weight: 00;
   font-size: 24px;
-  text-shadow: 0 2px rgba(0,0,0,0.15);
 }
 
 h5{
@@ -219,7 +218,7 @@ section{
 }
 
 .home-link{
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .date-hed{
   margin:0 0 50px 0;
@@ -338,6 +337,9 @@ section{
   font-family: 'Lato', sans-serif;
 }
 
+.tag-title{
+  margin-bottom: 15px;
+}
 .tags-list{
   margin-bottom: 20px;
 }

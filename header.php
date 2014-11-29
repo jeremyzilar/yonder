@@ -33,6 +33,3 @@
 
     <!-- Header -->
     <?php include(INC . '/head.php'); ?>
-    
-    <!-- Mission Box -->
-    <?php //include(INC . '/mission-box.php'); ?>
