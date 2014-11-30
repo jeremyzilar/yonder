@@ -8,9 +8,9 @@
 					<form action="//yondernews.us9.list-manage.com/subscribe/post?u=6f5470c92d20b5e4713750f26&amp;id=d1345c5295" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate="" role="form">
 						<div class="form-group mc-field-group">
 							<label for="mce-EMAIL">Email Address </label>
-							<input type="email" value="" name="EMAIL" class="form-control input-lg required email" id="mce-EMAIL" placeholder="E-mail Address">
+							<input type="email" value="" name="EMAIL" class="form-control input-md required email" id="mce-EMAIL" placeholder="E-mail Address">
 						</div>
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-lg btn-submit">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-md btn-submit">
 						<div id="mce-responses" class="clear hidden">
 							<div class="response" id="mce-error-response" style="display:none"></div>
 							<div class="response" id="mce-success-response" style="display:none"></div>

@@ -8,6 +8,7 @@
           <?php $curYear = date('Y'); ?>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <p class="datespan"><?php echo $curYear; ?></p>
+          <p><i class="fa fa-flag"></i></p>
         </div>
       </div>
       <div class="row hidden">

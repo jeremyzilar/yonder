@@ -15,13 +15,13 @@ SM
 @media screen and (min-width: 768px) {
 	#head .logo{
 	  margin-left: -20px;
-	  margin-bottom: 5px;
+	  margin-bottom: 10px;
 	  width: 180px;
 	}
 	#head h1{
-		margin-bottom: 75px;
+		margin-bottom: 50px;
 	  font-size: 90px;
-	  line-height: 105px;
+	  line-height: 90px;
 	}
 	#head h3 {
 	  font-size: 24px;
