@@ -16,6 +16,7 @@ body {
   background: #FFFEF5;
   background: #fff;
   background: #F8F7EE;
+  /*background: #F7F4E2;*/
   /*background: #f8f7dd;*/
   /*background: #FFFEF5 url('img/bluebg3.png') no-repeat;*/
   /*background:rgba(205,217,113,.2);*/
@@ -234,6 +235,7 @@ section{
   /*font-family: 'freight-text-pro', 'Palentino', Georgia, serif;*/
 }
 .date-hed h5 a{
+  /*color:#90A0D6;*/
   text-decoration: none;
 }
 .entry{
@@ -354,6 +356,7 @@ section{
 }
 .share-buttons a{
   color:#999;
+  color:#90A0D6;
   -webkit-transition: color 0.15s ease-in-out;
      -moz-transition: color 0.15s ease-in-out;
        -o-transition: color 0.15s ease-in-out;
@@ -526,8 +529,10 @@ section{
 
 
 #mission-box{
+  margin: 30px 0;
   background: #333;
   background: #0a1523;
+  background: #3B3D44;
   color:#fff;
 }
 .mission-txt{
@@ -542,6 +547,9 @@ section{
 }
 #footer p{
   font-size:15px;
+}
+#footer .fa-flag{
+  color:#DD514E;
 }
 .datespan{
  font-weight: 400; 

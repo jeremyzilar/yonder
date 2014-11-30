@@ -1,13 +1,6 @@
-<section id="social">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<p>
-					<a href="http://twitter.com/foodcoop" title="The Park Slope Food Coop on Twitter" class="twitter"><i class="fa fa-twitter-square fa-2x"></i></a> 
-					<a href="http://www.pinterest.com/foodcoop/" title="The Park Slope Food Coop on Pinterest" class="pinterest"><i class="fa fa-pinterest fa-2x"></i></a>
-					<a href="http://instagram.com/foodcoop" title="The Park Slope Food Coop on Instagram" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
-				</p>
-			</div>
-		</div>
+<div id="social" class="row">
+	<div class="col-xs-12">
+		<a href="http://twitter.com/andrejmrevlje" title="Follow Andrej Mrevlje on Twitter"><i class="fa fa-twitter"></i></a>
+		<a href="http://facebook.com/" title="Subscribe to Yonder from Andrej Mrevlje on Facebook"><i class="fa fa-facebook"></i></a>
 	</div>
-</section>
+</div>

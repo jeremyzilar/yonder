@@ -114,7 +114,7 @@ function date_marker(){
 	$month = get_the_time('m'); 
 	$day   = get_the_time('d');
 	$archiveurl = get_day_link( $year, $month, $day );
-	if (!empty($post_date)) {
+	if (!empty($post_date) && !is_page()) {
 		echo '<div class="date-hed"><h5><a href="'.$archiveurl.'"><i class="fa fa-globe"></i> '.$post_date.'</a></h5></div>';
 	}
 }
