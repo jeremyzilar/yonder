@@ -27,10 +27,12 @@ body {
 
 a{
   color:#F16B6D;
+  color:#DD514E;
 }
 a:hover{
   text-decoration: underline;
  color:#F16B6D; 
+ color:#DD514E; 
 }
 
 hr{
@@ -127,6 +129,11 @@ section{
   padding: 60px 0 60px 0;
   background: #444;
   background: #F16B6D;
+  background: #F74B53;
+  background: #E25D64;
+  background: #E0685F;
+  background: #DD514E;
+  /*background: #FF3E4C;*/
   /*background: #f15849;*/
   /*background: #f14d3e;*/
   color:#fff;
@@ -496,6 +503,8 @@ section{
 #newsletter-promo .box .mailing-list-box .btn-submit{
   background: #555;
   background: #5098f1;
+  background: #4F64DB;
+  background: #6077D8;
   color:#fff;
   -webkit-transition: all 0.15s ease-in-out;
      -moz-transition: all 0.15s ease-in-out;
