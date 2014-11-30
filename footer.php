@@ -6,9 +6,9 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-sm-offset-3">
           <?php $curYear = date('Y'); ?>
-          <p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a></p>
+          <p class="flag"><i class="fa fa-flag"></i></p>
+          <p class="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a></p>
           <p class="datespan"><i class="fa fa-copyright"></i> <?php echo $curYear; ?></p>
-          <p><i class="fa fa-flag"></i></p>
         </div>
       </div>
       <div class="row hidden">

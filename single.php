@@ -1,8 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+	if (is_user_logged_in() ) { ?>
 	<section id="blog">
-		<?php
-		loop();
-		include(INC . '/nextprev.php');
-		?>
+		<?php loop(); ?>
 	</section>
-<?php get_footer(); ?>
+	<?php }
+get_footer(); ?>
