@@ -4,8 +4,9 @@
     <title><?php wp_title( '|', true, 'right' ); ?><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></title>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-  	<meta name="keywords" content="Yonder" />
-  	<meta name="description" content="A member-owned cooperative in Brooklyn, New York." />
+  	<meta name="keywords" content="Yonder, Andrej Mrevlje" />
+  	<meta name="description" content="<?php echo esc_attr( get_bloginfo( 'description' ) ); ?>" />
+    
     <link rel="profile" href="http://gmpg.org/xfn/11" />
   	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
