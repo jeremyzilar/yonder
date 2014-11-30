@@ -141,8 +141,8 @@ function get_related(){
 }
 
 function andrej_share_buttons() {
-	$twitter = '<a href="http://twitter.com/andrejmrevlje" title="Follow Andrej Mrevlje on Twitter"><i class="fa fa-twitter"></i></a>';
-	$facebook = '<a href="http://facebook.com/" title="Subscribe to Yonder from Andrej Mrevlje on Facebook"><i class="fa fa-facebook"></i></a>';
+	$twitter = '<a title="'.get_the_title().'" href="http://twitter.com/share?url='.get_permalink().'&text='.get_the_title().'"><i class="fa fa-twitter"></i></a>';
+	$facebook = '<a href="http://www.facebook.com/sharer.php?u='.get_permalink().'" title="Subscribe to Yonder from Andrej Mrevlje on Facebook"><i class="fa fa-facebook"></i></a>';
 	echo '<div class="share-buttons">' . $twitter . ' ' . $facebook . '</div>';
 }
 
