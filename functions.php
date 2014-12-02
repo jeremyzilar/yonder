@@ -166,7 +166,7 @@ function andrej_entry_meta($id) {
 
 	if ( is_user_logged_in() ) {
 		$edit = get_edit_post_link($id);
-		echo ' | <a href="'.$edit.'" class="btn-edit">edit</a>';
+		echo ' | <a href="'.$edit.'" class="btn-edit"><i class="fa fa-pencil"></i> edit</a>';
 	}
 }
 

@@ -384,7 +384,7 @@ section{
 }
 
 .btn-edit{
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 /*IMAGES*/
@@ -508,6 +508,7 @@ section{
   background: #5098f1;
   background: #4F64DB;
   background: #6077D8;
+  background: #6A88E5;
   color:#fff;
   -webkit-transition: all 0.15s ease-in-out;
      -moz-transition: all 0.15s ease-in-out;
@@ -517,12 +518,38 @@ section{
 #newsletter-promo .box .mailing-list-box .btn-submit:hover{
   background: #444;
   background: #427fcb;
+  background: #536cbd;
 }
 
 
 
-
-
+#editor-tools{
+  margin-top: 80px;
+  padding: 10px 8px 15px 10px;
+  font-size: 12px;
+  color:#686868;
+  border-radius: 3px;
+  background: #fff;
+  display: none;
+}
+#editor-tools h5{
+  margin-top: 0;
+  display: none;
+}
+#editor-tools ul{
+  margin-bottom: 0;
+  padding: 0;
+}
+#editor-tools li{
+  margin-bottom: 5px;
+  padding: 0 0 0 18px;
+  list-style-type: none;
+}
+#editor-tools li i{
+  margin-top: 3px;
+  text-indent: -17px;
+  float: left;
+}
 #nextprev{
   padding: 0;
 }
