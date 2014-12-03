@@ -18,9 +18,9 @@
     <!-- Social Promo -->
     <?php include(INC . '/social.php'); ?>
 
-    <div class="row">
+    <div id="coming-soon" class="row">
       <div class="col-xs-12">
-        <h3>Coming soon!</h3>
+        <h3>Starting soon!</h3>
       </div>
     </div>
 

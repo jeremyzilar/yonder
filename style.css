@@ -191,6 +191,10 @@ section{
   border-bottom:1px #fff solid;
 }
 
+#coming-soon{
+  margin-top: 20px;
+}
+
 /*Social*/
 #social{}
 #social a{
