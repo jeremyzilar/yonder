@@ -209,3 +209,10 @@ function custom_excerpt_length( $length ) {
 	return 35;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function get_newsletter_link(){
+  $newsletter_id = get_cat_ID( 'Newsletter' );
+  $newsletter_link = get_category_link( $newsletter_id );
+  return $newsletter_link;
+}
+
