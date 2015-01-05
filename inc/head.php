@@ -1,6 +1,4 @@
 <section id="head">
-	<div class="row blue"></div>
-
   <div class="container">
     <div class="row">
       <div class="col-xs-12">

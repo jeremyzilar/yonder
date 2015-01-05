@@ -33,4 +33,10 @@
   <body <?php body_class(); ?>>
 
     <!-- Header -->
-    <?php include(INC . '/head.php'); ?>
+    <?php
+      include(INC . '/head.php');
+      if ( is_user_logged_in() ) {
+        include_once(INC . '/editor-tools.php');
+      }
+      
+    ?>

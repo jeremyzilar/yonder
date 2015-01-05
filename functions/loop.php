@@ -22,11 +22,9 @@ EOF;
 			$day = get_the_date('j');
 			if ($day != $day_check) {
 		    if ($day_check != '') {
-		    	if ( is_user_logged_in() ) {
-		    		include_once(INC . '/editor-tools.php');
-		    	}
 		      echo $end;
 		    }
+			  
 			  echo $start;
 
 			  // Insert Home Link
