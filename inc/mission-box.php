@@ -7,7 +7,7 @@
 			<div class="col-xs-12 col-sm-7 mission-txt">
 				<p>Yonder is a weekly newsletter on the news from <a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>" title="About Andrej Mrevlje and Yonder">Andrej Mrevlje</a>, <span>deivered every Sunday.</span></p>
 				<p><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>">More about Yonder »</a></p>
-				<p>Questions? <a href="mailto:andrej.mrevlje@gmail.com">andrej.mrevlje@gmail.com</a></p>
+				<p>Questions? <a href="mailto:andrej@yondernews.com">andrej@yondernews.com</a></p>
 
 				<!-- Social Promo -->
   			<?php include(INC . '/social.php'); ?>

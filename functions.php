@@ -7,8 +7,6 @@ ini_set( 'max_execution_time', '300' );
 include_once 'functions/wp_enqueue_script.php';
 include_once 'functions/loop.php';
 include_once 'functions/kicker.php';
-include_once 'functions/related-link.php';
-
 
 
 // Variables
@@ -216,3 +214,31 @@ function get_newsletter_link(){
   return $newsletter_link;
 }
 
+
+
+
+// Feeds for Newsletter
+function add_newsletter_feed() {
+  add_feed('newsletter', 'get_newsletter_feed_template');
+}
+add_action('init', 'add_newsletter_feed');
+
+function get_newsletter_feed_template() {
+  add_filter('the_content_feed', 'newsletter_feed_filter');
+  include(ABSPATH . '/wp-includes/feed-rss2.php' );
+}
+
+function newsletter_feed_filter($content) {
+  // Weirdness we need to add to strip the doctype with later.
+  $content = '<div>' . $content . '</div>';
+  $doc = new DOMDocument();
+  $doc->LoadHTML($content);
+  $images = $doc->getElementsByTagName('img');
+  foreach ($images as $image) {
+    $image->removeAttribute('height');
+    $image->setAttribute('width', '320');
+  }
+  // Strip weird DOCTYPE that DOMDocument() adds in
+  $content = substr($doc->saveXML($doc->getElementsByTagName('div')->item(0)), 5, -6);
+  return $content;
+}
