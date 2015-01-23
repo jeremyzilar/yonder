@@ -1,0 +1,13 @@
+<style type="text/css">
+  .standardCSS{
+    color:#505050;
+    font-size:15px;
+  }
+
+  @media only screen and (max-width:480px){
+    .mediaQueryCSS{
+      color:#CCCCCC !important;
+      font-size:20px !important;
+    }
+  }
+</style>
