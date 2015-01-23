@@ -8,7 +8,6 @@ include_once 'functions/wp_enqueue_script.php';
 include_once 'functions/loop.php';
 include_once 'functions/kicker.php';
 
-
 // Variables
 $tdir = get_template_directory_uri();
 define('TDIR', $tdir);
