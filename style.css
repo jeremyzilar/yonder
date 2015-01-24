@@ -603,6 +603,16 @@ section{
  color:#3B3D44;
  font-size:13px;
 }
+#footer .colophon{
+  margin-top:10px;
+}
+#footer .colophon,
+#footer .colophon a{
+ font-weight: 400; 
+ font-style: italic;
+ color:#808493;
+ font-size:12px;
+}
 #menu-footer{
   padding:0;
 }

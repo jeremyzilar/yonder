@@ -9,6 +9,7 @@
           <p class="flag"><i class="fa fa-flag"></i></p>
           <p class="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a></p>
           <p class="datespan"><i class="fa fa-copyright"></i> <?php echo $curYear; ?></p>
+          <p class="colophon">Site by <a href="http://jeremyzilar.com/">Jeremy Zilar</a></p>
         </div>
       </div>
       <div class="row hidden">
