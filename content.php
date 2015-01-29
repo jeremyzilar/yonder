@@ -28,10 +28,12 @@
 		</div><!-- .entry-content -->
 
 	<?php endif; ?>
-
-	<footer class="entry-meta">
-	  <?php andrej_entry_meta($post->ID); ?>
-	</footer><!-- .entry-meta -->
+	<?php if (!is_page() ) { ?>
+		<footer class="entry-meta">
+		  <?php andrej_entry_meta($post->ID); ?>
+		</footer><!-- .entry-meta -->
+	<?php } ?>
+	
 
 	<!-- Comments Start here -->
 	<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) { ?>

@@ -17,6 +17,7 @@
     <div id="coming-soon" class="row">
       <div class="col-xs-12">
         <h3>Coming early 2015!</h3>
+        <p class="learn-more">Learn More »</p>
       </div>
     </div>
 
