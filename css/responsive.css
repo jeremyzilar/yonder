@@ -40,7 +40,7 @@ SM
 		font-size: 24px;
 	}
 	#newsletter-promo .box h3 span {
-  	display: inline;
+  	display: block;
 	}
 	#newsletter-promo .box .mailing-list-box input{
 		width:auto;

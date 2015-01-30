@@ -190,8 +190,19 @@ section{
   border-bottom:1px #fff solid;
 }
 
-#coming-soon{
-  margin-top: 20px;
+#learn-more{
+  margin-top: 70px;
+}
+#learn-more p{
+  font-size: 24px;
+  font-weight: 300;
+}
+#learn-more p a{
+  color:#fff;
+  text-decoration: underline;
+}
+#learn-more .coming-soon{
+  text-transform: uppercase;
 }
 
 /*Social*/
@@ -477,7 +488,7 @@ section{
   font-size: 21px;
 }
 #newsletter-promo .box h3 span {
-  display: block;
+  display: inline;
 }
 #newsletter-promo .box h3 i{
   margin-right: 3px;

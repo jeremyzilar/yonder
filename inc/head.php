@@ -14,10 +14,10 @@
     <!-- Social Promo -->
     <?php include(INC . '/social.php'); ?>
 
-    <div id="coming-soon" class="row">
+    <div id="learn-more" class="row">
       <div class="col-xs-12">
-        <h3>Coming early 2015!</h3>
-        <p class="learn-more">Learn More »</p>
+        <p class="coming-soon">Publishing, early 2015</p>
+        <p><a href="#">Read our mission and purpose »</a></p>
       </div>
     </div>
 
