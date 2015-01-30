@@ -179,7 +179,7 @@ section{
   line-height: 35px;
 }
 #head h3 span{
-  display: inline;
+  display: block;
 }
 
 #head h3 a{
@@ -412,7 +412,7 @@ section{
 /*Newsletter Promo*/
 #newsletter-promo{
   margin-bottom: 10px;
-  margin-top: 30px;
+  margin-top: 70px;
   padding: 0;
   /*display: none;*/
 }
@@ -475,6 +475,9 @@ section{
 #newsletter-promo .box h3{
   margin-bottom: 15px;
   font-size: 21px;
+}
+#newsletter-promo .box h3 span {
+  display: block;
 }
 #newsletter-promo .box h3 i{
   margin-right: 3px;
@@ -566,6 +569,7 @@ section{
   color:#fff;
 }
 .mission-txt{
+  margin-top: 20px;
   font-size: 21px;
   font-weight: 300;
 }
@@ -575,15 +579,21 @@ section{
   padding: 40px 0;
   text-align: center;
   font-weight: 600;
+  border-bottom: 15px solid #222;
+  color:#ccc;
+  background: #3B3D44;
+  background: #2b2d32;
 }
 #footer p{
   margin: 0;
-  font-size:15px;
+  font-size:21px;
+  line-height: 21px;
 }
 #footer .flag{
-  margin: 0 auto 5px auto;
+  margin: 0 auto;
   border: 1px #DD514E solid;
   border-radius: 20px;
+  font-size:15px;
   width: 30px;
   height: 30px;
 }
@@ -592,15 +602,17 @@ section{
   font-family: "livory";
   text-transform: lowercase;
 }
+#footer .title a{
+  color:#ccc;
+}
 #footer .flag .fa-flag{
   color:#DD514E;
   position: relative;
   top: 3px;
 }
 #footer .datespan{
-  margin-top:5px;
+  margin-bottom:8px;
   font-weight: 400; 
-  color:#4d4f58;
   font-size:13px;
 }
 #footer .colophon{
@@ -608,8 +620,6 @@ section{
 }
 #footer .colophon{
   font-weight: 400; 
-  /*font-style: italic;*/
-  color:#4d4f58;
   font-size:14px;
 }
 #menu-footer{

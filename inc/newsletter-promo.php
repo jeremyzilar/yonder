@@ -1,6 +1,6 @@
 <div class="row" id="newsletter-promo">
 	<div class="col-xs-12 box">
-		<h3><i class="fa fa-envelope"></i> A weekly newsletter, delivered every Sunday.</h3>
+		<h3><i class="fa fa-envelope"></i> A weekly newsletter, <span>delivered every Sunday.</span></h3>
 		<div class="mailing-list-box">
 			<!-- Begin MailChimp Signup Form -->
 			<div id="mc_embed_signup">
@@ -21,9 +21,6 @@
 				</form>
 			</div>
 			<!--End mc_embed_signup-->
-
-			<p id="subscriber" class="btn btn-primary">TEST</p>
-
 		</div>
 	</div>
 </div>

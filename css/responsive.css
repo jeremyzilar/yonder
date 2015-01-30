@@ -39,6 +39,9 @@ SM
 	#newsletter-promo .box h3{
 		font-size: 24px;
 	}
+	#newsletter-promo .box h3 span {
+  	display: inline;
+	}
 	#newsletter-promo .box .mailing-list-box input{
 		width:auto;
 	}
@@ -46,6 +49,9 @@ SM
   	width:444px;
 	}	
 	#editor-tools{display: block;}
+	.mission-txt{
+		margin-top: 15px;
+	}
 }
 
 /*
