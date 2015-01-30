@@ -1,4 +1,10 @@
 <style type="text/css">
+  .mcnTextContent{
+    background: #000;
+  }
+</style>
+
+<style type="text/css">
   .standardCSS{
     color:#505050;
     font-size:15px;
