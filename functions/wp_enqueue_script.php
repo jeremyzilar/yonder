@@ -2,7 +2,8 @@
 
 function scripts_styles() {
 	global $wp_styles;
-	$q = 'v115';
+	$q = 'v120';
+	
 	// Le JS
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), $q, true );
 	//wp_enqueue_script('color-js', get_template_directory_uri() . '/js/jquery-color.js', array( 'jquery' ), $q, true );
