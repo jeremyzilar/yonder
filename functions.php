@@ -218,6 +218,24 @@ function get_newsletter_link(){
 
 
 
+function andrej_featured_media($size) {
+  global $post;
+  if ( has_post_thumbnail() ) {
+    $thumb = get_the_post_thumbnail( $post->ID, $size);
+    $thumb = preg_replace( '/(width|height)="\d*"\s/', "", $thumb ); // Removes height & width
+    $thumb = str_replace( 'class="', 'class="img-responsive ', $thumb );
+    if (is_single()) {
+      return '<div class="photo '.$size.'">' . $thumb . '<span class="credit">Photo by: Anla Cheng</span> <span class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></div>';
+    } else {
+      return '<div class="photo '.$size.'"><a href="' . get_permalink() . '">' . $thumb . '</a></div>';
+    }
+    
+  }
+}
+
+
+
+
 
 // Feeds for Newsletter
 function add_newsletter_feed() {

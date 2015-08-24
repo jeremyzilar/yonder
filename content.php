@@ -13,6 +13,8 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h3>
 		<?php endif; // is_single() ?>
+
+		<?php echo andrej_featured_media('large'); ?>
 		
 	</header><!-- .entry-header -->
 
