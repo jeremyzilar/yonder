@@ -217,6 +217,18 @@ function get_newsletter_link(){
 }
 
 
+function wp_get_attachment( $attachment_id ) {
+  $attachment = get_post( $attachment_id );
+  return array(
+    'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+    'caption' => $attachment->post_excerpt,
+    'description' => $attachment->post_content,
+    'href' => get_permalink( $attachment->ID ),
+    'src' => $attachment->guid,
+    'title' => $attachment->post_title
+  );
+}
+
 
 function andrej_featured_media($size) {
   global $post;
@@ -224,10 +236,20 @@ function andrej_featured_media($size) {
     $thumb = get_the_post_thumbnail( $post->ID, $size);
     $thumb = preg_replace( '/(width|height)="\d*"\s/', "", $thumb ); // Removes height & width
     $thumb = str_replace( 'class="', 'class="img-responsive ', $thumb );
+    $img_id = get_post_thumbnail_id($post->ID);
+    $attachment_meta = wp_get_attachment($img_id);
+    
+    $alt = 'Yonder News, by Andrej Mrevlje';
+    $caption = $attachment_meta['caption'];
+    if (!empty($caption)) {
+      $caption = '<span class="caption">'.$caption.'</span>';
+      $alt = $caption . ' | Yonder News, by Andrej Mrevlje';
+    }
+
     if (is_single()) {
-      return '<div class="photo '.$size.'">' . $thumb . '<span class="credit">Photo by: Anla Cheng</span> <span class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></div>';
+      return '<div class="photo '.$size.'">' . $thumb . '' . $caption . ' </div>';
     } else {
-      return '<div class="photo '.$size.'"><a href="' . get_permalink() . '">' . $thumb . '</a></div>';
+      return '<div class="photo '.$size.'"><a href="' . get_permalink() . '">' . $thumb . '</a>'.$caption.'</div>';
     }
     
   }
