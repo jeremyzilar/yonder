@@ -21,8 +21,8 @@
     <!-- Open Graph Tags -->
     <?php include INC . 'open-graph.php'; ?>
 
-  	<!-- RSS -->
-  	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 
     <?php wp_head(); ?>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
