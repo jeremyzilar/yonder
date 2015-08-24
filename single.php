@@ -1,7 +1,5 @@
-<?php get_header();
-  if (is_user_logged_in() ) { ?>
+<?php get_header(); ?>
   <section id="blog">
     <?php loop(); ?>
   </section>
-  <?php }
-get_footer(); ?>
+<?php get_footer(); ?>
