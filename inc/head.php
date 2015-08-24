@@ -14,13 +14,6 @@
     <!-- Social Promo -->
     <?php include(INC . '/social.php'); ?>
 
-    <div id="learn-more" class="row">
-      <div class="col-xs-12">
-        <p class="coming-soon">Publishing, early 2015</p>
-        <p><a href="<?php echo esc_url( home_url( '/' ) ); ?>about/">Read our mission and purpose »</a></p>
-      </div>
-    </div>
-
   </div>
 
 </section>
