@@ -256,7 +256,14 @@ function andrej_featured_media($size) {
 }
 
 
+function remove_empty_lines( $content ){
 
+  // replace empty lines
+  $content = preg_replace("/&nbsp;/", "", $content);
+
+  return $content;
+}
+add_action('content_save_pre', 'remove_empty_lines');
 
 
 // Feeds for Newsletter
