@@ -1,0 +1,90 @@
+<style type="text/css">
+  .yonder-title a{
+    color: #121212;
+    color: #505050;
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  .yonder-entry{
+    margin: 30px 0;
+  }
+  .yonder-content a,
+  .yonder-meta a{
+    color: #dd514e;
+  }
+  .yonder-date{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    font-weight: bold;
+  }
+  .yonder-author{
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    font-weight: bold;
+    display: none;
+  }
+  .yonder-recent{
+    margin: 30px 0;
+  }
+  .yonder-recent h3{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px; 
+    font-weight: bold;
+  }
+  .yonder-recent a{
+    margin-bottom: 5px;
+    color: #dd514e;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+  }
+</style>  
+
+*|RSSITEMS:|*
+<table border="0" cellpadding="0" cellspacing="0" class="yonder-entry">
+  <tr>
+    <td>
+      <h2 class="yonder-title"><a href="*|RSSITEM:URL|*" target="_blank">*|RSSITEM:TITLE|*</a></h2>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div class="yonder-content">
+        *|RSSITEM:CONTENT_FULL|*
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div class="yonder-meta">
+        <div class="yonder-date"><a href="*|RSSITEM:URL|*" target="_blank">*|RSSFEED:DATE:l F j, Y|*</a></div>
+        <div class="yonder-author">By *|RSSITEM:AUTHOR|*</div>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <div class="yonder-social">
+        *|RSSITEM:TWITTER|* *|RSSITEM:LIKE|*
+      </div>
+    </td>
+  </tr>
+</table>
+*|END:RSSITEMS|*
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <div class="yonder-recent">
+        <h3>Recent Items:</h3>
+        *|RSS:RECENT|*
+      </div>
+    </td>
+  </tr>
+</table>
+
