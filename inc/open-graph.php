@@ -31,8 +31,8 @@
     }
   }
 
-  $icon = THEME . '/img/yonder-logo.png';
-  $logo = THEME . '/img/andrej_1000.png';
+  $yonderlogo = THEME . '/img/yonder-sq-250.png';
+  $andrej = THEME . '/img/andrej-sq-250.png';
 
 
   echo <<< EOF
@@ -44,8 +44,9 @@
     <meta property="og:url" content="$permalink" />
     <meta property="og:site_name" content="$sitename" />
     $thumbnail
-    <meta property="og:image" content="$logo" />
-    <meta property="og:image" content="$icon" />
+    <meta property="og:image" content="$yonderlogo" />
+    <meta property="og:image" content="$andrej" />
+    
 
     <!-- Twitter 1 -->
     <link rel="me" href="https://twitter.com/$twitter" />
