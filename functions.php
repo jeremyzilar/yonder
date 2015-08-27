@@ -141,8 +141,14 @@ function get_related(){
 }
 
 function andrej_share_buttons() {
+  // setup_postdata( $post );
 	$twitter = '<a title="'.get_the_title().'" href="http://twitter.com/share?url='.get_permalink().'&text='.get_the_title().'"><i class="fa fa-twitter"></i></a>';
-	$facebook = '<a href="http://www.facebook.com/sharer.php?u='.get_permalink().'" title="Subscribe to Yonder from Andrej Mrevlje on Facebook"><i class="fa fa-facebook"></i></a>';
+  $permalink = urlencode(get_permalink());
+  $sharetitle = urlencode('See ' . get_the_title() . ' on Yonder News');
+  $facebook = <<< EOF
+    <a aria-hidden="true" href="http://www.facebook.com/sharer.php?u=$permalink&t=$sharetitle" target="_blank"><i class="fa fa-facebook"></i></a>
+EOF;
+
 	echo '<div class="share-buttons">' . $twitter . ' ' . $facebook . '</div>';
 }
 
