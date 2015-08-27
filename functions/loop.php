@@ -104,7 +104,9 @@ function archive_top($i){
 	if (is_tag() && $i==0) {
   	echo '<h4 class="archive-title"><i class="fa fa-tag"></i> ' . single_tag_title('', false) . '</h4>';
   } else if (is_category()) {
-  	echo '<h4 class="archive-title"><i class="fa fa-tag"></i> ' . single_category_title('', false) . '</h4>';
+  	// andrej_the_kicker();
+  	$kicker = andrej_get_kicker();
+  	echo '<h4 class="archive-title"><i class="fa fa-tag"></i> ' . $kicker . '</h4>';
   }
 }
 
