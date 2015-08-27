@@ -5,6 +5,9 @@
   $the_title = wp_title( '|', false, 'right' ) . esc_attr( get_bloginfo( 'name', 'display' ) );
   $sitename = esc_attr( get_bloginfo( 'name', 'display' ) );
   $twitter = 'yondernews';
+  
+
+  setup_postdata( $post );
 
   if ( is_home() || is_archive() ) {
     $type = 'website';
