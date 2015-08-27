@@ -37,7 +37,7 @@
 
   echo <<< EOF
 
-    <!-- Facbook 1 -->
+    <!-- Facbook -->
     <meta property="og:type" content="$type" />
     <meta property="og:title" content="$the_title" />
     <meta property="og:description" content="$description" />
@@ -48,7 +48,7 @@
     <meta property="og:image" content="$andrej" />
     
 
-    <!-- Twitter 1 -->
+    <!-- Twitter -->
     <link rel="me" href="https://twitter.com/$twitter" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@$twitter">
