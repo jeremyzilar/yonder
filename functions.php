@@ -297,3 +297,17 @@ function newsletter_feed_filter($content) {
   $content = substr($doc->saveXML($doc->getElementsByTagName('div')->item(0)), 5, -6);
   return $content;
 }
+
+
+
+
+function featuredtoRSS($content) {
+  global $post;
+  if ( has_post_thumbnail( $post->ID ) ){
+    $content = '' . get_the_post_thumbnail( $post->ID, 'large', array( 'style' => 'margin:0;' ) ) . '' . $content;
+  }
+  return $content;
+}
+
+add_filter('the_excerpt_rss', 'featuredtoRSS');
+add_filter('the_content_feed', 'featuredtoRSS');
