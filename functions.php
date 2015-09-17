@@ -309,5 +309,5 @@ function featuredtoRSS($content) {
   return $content;
 }
 
-add_filter('the_excerpt_rss', 'featuredtoRSS');
-add_filter('the_content_feed', 'featuredtoRSS');
+// add_filter('the_excerpt_rss', 'featuredtoRSS');
+// add_filter('the_content_feed', 'featuredtoRSS');
