@@ -311,3 +311,24 @@ function featuredtoRSS($content) {
 
 // add_filter('the_excerpt_rss', 'featuredtoRSS');
 // add_filter('the_content_feed', 'featuredtoRSS');
+
+
+
+function modify_read_more_link() {
+  return '&nbsp;<a class="more-link" href="' . get_permalink() . '">Read&nbsp;more&nbsp;»</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
+function yonder_feed($feed_type = null) {
+  if ( !$feed_type )
+    $feed_type = get_default_feed();
+
+  global $more;
+  $more_restore = $more;
+  $more = 0;
+  $content = apply_filters('the_content', get_the_content());
+  $more = $more_restore;
+  $content = str_replace(']]>', ']]& gt;', $content);
+  return $content;
+}
+add_filter('the_content_feed', 'yonder_feed');
