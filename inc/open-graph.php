@@ -1,5 +1,6 @@
 <?php 
-// Open Graph tags for Twitter and Facebook
+  
+  // Open Graph tags for Twitter and Facebook
   
   $siteurl = esc_url( home_url( '/' ) );
   $the_title = wp_title( '|', false, 'right' ) . esc_attr( get_bloginfo( 'name', 'display' ) );
@@ -14,11 +15,22 @@
     $permalink = "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'];
     $description = esc_attr( get_bloginfo( 'description', 'display' ) );
     $the_content = '';
+    $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
   } else {
     $type = 'article';
     $permalink = esc_url( get_permalink($post->ID) );
     $description = get_the_excerpt();
     $the_content = get_the_content();
+    $keywords = '';
+    $posttags = get_the_tags();
+    if ($posttags) {
+      foreach($posttags as $tag) {
+        $keywords .= $tag->name . ', ';
+      }
+      $keywords .= 'Yonder, Andrej Mrevlje, Global Events';
+    } else {
+      $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
+    }
   }
 
   $thumbnail = '';
@@ -36,6 +48,9 @@
 
 
   echo <<< EOF
+
+    <meta name="description" content="$description" />
+    <meta name="keywords" content="$keywords" />
 
     <!-- Facbook -->
     <meta property="og:type" content="$type" />
