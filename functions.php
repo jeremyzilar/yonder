@@ -142,38 +142,32 @@ function get_related(){
 
 function andrej_share_buttons() {
   // setup_postdata( $post );
-	$twitter = '<a title="'.get_the_title().'" href="http://twitter.com/share?url='.get_permalink().'&text='.get_the_title().'"><i class="fa fa-twitter"></i></a>';
+	$twitter = '<a class="twitter-share" title="'.get_the_title().'" href="http://twitter.com/share?url='.get_permalink().'&text='.get_the_title().'"><i class="fa fa-twitter"></i></a>';
   $permalink = urlencode(get_permalink());
-  $sharetitle = urlencode('See ' . get_the_title() . ' on Yonder News');
+  $sharetitle = urlencode('See ' . get_the_title() . ' | Yonder News');
+  $sharesum = urlencode('See ' . get_the_excerpt());
   $facebook = <<< EOF
-    <a aria-hidden="true" href="http://www.facebook.com/sharer.php?u=$permalink&t=$sharetitle" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a class="facebook-share" aria-hidden="true" href="http://www.facebook.com/sharer.php?u=$permalink&t=$sharetitle" target="_blank"><i class="fa fa-facebook"></i></a>
+EOF;
+  $linkedin = <<< EOF
+    <a class="linkedin-share" aria-hidden="true" href="http://www.linkedin.com/shareArticle?mini=true&url=$permalink&title=$sharetitle&summary=$sharesum&source=yondernews.com target="_blank"><i class="fa fa-linkedin"></i></a>
 EOF;
 
-	echo '<div class="share-buttons">' . $twitter . ' ' . $facebook . '</div>';
+	echo '<div class="share-buttons">' . $twitter . ' ' . $facebook . ' '. $linkedin . '</div>';
 }
 
 
 // Entry Meta
 function andrej_entry_meta($id) {
-	$tag_list = get_the_tag_list('', ', ', '');
-	if ( $tag_list ) {
-		echo ' <div class="tags-list">' . $tag_list . '</div>';
-	}
 
-  $author = get_the_author();
-  $author_user = get_the_author_meta( 'user_login' );
-  $author_link = get_author_posts_url(get_the_author_meta( 'ID' ));
+  // Tags list
+  $tag_list = get_the_tag_list('', ' ', '');
+  if ( $tag_list ) {
+    echo ' <div class="tags-list">' . $tag_list . '</div>';
+  }
 
+  // Share Buttons
   andrej_share_buttons();
-
-	echo '<span class="author_img"><img class="hidden" src="'.TDIR.'/img/'.$author_user.'.png" alt="'.$author.'"> By '.$author.' | ';
-
-	andrej_entry_date();
-
-	if ( is_user_logged_in() ) {
-		$edit = get_edit_post_link($id);
-		echo ' | <a href="'.$edit.'" class="btn-edit"><i class="fa fa-pencil"></i> edit</a>';
-	}
 }
 
 // CATEGORY

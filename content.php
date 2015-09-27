@@ -14,6 +14,27 @@
 		</h3>
 		<?php endif; // is_single() ?>
 
+
+		<?php
+		  $author = get_the_author();
+		  $author_user = get_the_author_meta( 'user_login' );
+		  $author_link = get_author_posts_url(get_the_author_meta( 'ID' ));
+
+			echo '<div class="author_date">By '.$author.' | ';
+
+			andrej_entry_date();
+
+			if ( is_user_logged_in() ) {
+				$edit = get_edit_post_link($id);
+				echo ' | <a href="'.$edit.'" class="btn-edit"><i class="fa fa-pencil"></i> edit</a>';
+			}
+
+		  echo '</div>';
+		?>
+
+
+
+
 		<?php echo andrej_featured_media('large'); ?>
 		
 	</header><!-- .entry-header -->

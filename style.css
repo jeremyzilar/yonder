@@ -305,22 +305,15 @@ section{
 }
 .entry-title{
   margin-top:0;
-  margin-bottom:18px;
-  font-size:21px;
+  margin-bottom:14px;
+  font-size:24px;
   font-family: 'Lato', sans-serif;
-  /*font-family: "livory";*/
-  /*font-family: "brandon-grotesque";*/
-  font-weight:600;
-  font-weight:500;
-  color:#121212;
+  font-weight:700;
+  color:#444;
   text-shadow:none;
 }
 .entry-title a{
-  color:#505050;
-  color:#5098f1;
-  color:#3f7bc3;
-  color:#121212;
-  color:#333;
+  color:#444;
   text-decoration: none;
   border-bottom: 1px #F8F7EE solid;
   -webkit-transition: all 0.15s ease-in-out;
@@ -331,6 +324,14 @@ section{
 .entry-title a:hover{
   border-bottom: 1px #121212 solid;
   /*text-decoration: underline;*/
+}
+
+
+.author_date{
+  margin-bottom: 25px;
+  font-size:15px;
+  color:#686868;
+  font-family: 'Lato', sans-serif;
 }
 
 
@@ -352,7 +353,6 @@ section{
   margin-bottom:0;
   color:#b9b5b5;
   color:#9c9999;
-  font-size:13px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -360,42 +360,60 @@ section{
   margin-bottom: 15px;
 }
 .tags-list{
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+.tags-list a{
+  padding: 2px 12px 3px 12px;
+  background-color: rgba(221,81,78,.75);
+  font-size: 12px;
+  color:#fff;
+  border-radius: 10px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.15s ease-in-out;
+     -moz-transition: background-color 0.15s ease-in-out;
+       -o-transition: background-color 0.15s ease-in-out;
+          transition: background-color 0.15s ease-in-out;
+}
+.tags-list a:hover{
+  background-color: rgba(221,81,78,1);
 }
 
 .share-buttons{
-  margin-right: 8px;
-  display: inline;
+  display: block;
   font-size: 18px;
 }
 .share-buttons a{
-  color:#999;
-  color:#90A0D6;
-  -webkit-transition: color 0.15s ease-in-out;
-     -moz-transition: color 0.15s ease-in-out;
-       -o-transition: color 0.15s ease-in-out;
-          transition: color 0.15s ease-in-out;
-}
-.share-buttons a:hover{
-  color:#3f7bc3;
-}
-.entry-meta .author,
-.entry-meta .date{
-  color:#b9b5b5;
-  color:#9c9999;
+  padding: 5px 25px;
+  color:#fff;
+  -webkit-transition: background-color 0.15s ease-in-out;
+     -moz-transition: background-color 0.15s ease-in-out;
+       -o-transition: background-color 0.15s ease-in-out;
+          transition: background-color 0.15s ease-in-out;
 }
 
-.entry-meta .author_img{
-  top: -1px;
-  position: relative;
+
+.twitter-share{
+  background-color:rgba(0, 172, 237,.65);
 }
-.entry-meta .author_img img{
-  margin-right: 3px;
-  width:40px;
-  height:40px;
-  border-radius: 20px;
-  border:1px #ccc solid;
+.twitter-share:hover{
+  background-color:rgba(0, 172, 237,1.0);
 }
+
+.facebook-share{
+  background-color:rgba(59,89,152,.65);
+}
+.facebook-share:hover{
+  background-color:rgba(59,89,152,1.0);
+}
+
+.linkedin-share{
+  background-color:rgba(0,119,181,.65);
+}
+.linkedin-share:hover{
+  background-color:rgba(0,119,181,1.0);
+}
+
+
 
 .btn-edit{
   /*text-transform: uppercase;*/
