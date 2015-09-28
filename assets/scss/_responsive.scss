@@ -1,0 +1,75 @@
+/*
+Hide code snippets on mobile devices
+XS
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+*/
+@media screen and (max-width: 767px) {
+
+
+}
+
+/*
+Tablets and up
+SM
+*/
+@media screen and (min-width: 768px) {
+	#head .logo{
+	  margin-left: -20px;
+	  margin-bottom: 10px;
+	  width: 180px;
+	}
+	#head h1{
+		margin-bottom: 50px;
+	  font-size: 90px;
+	  line-height: 90px;
+	}
+	#head h3 {
+	  font-size: 24px;
+	}
+	#head h3 span{
+	  display:block;
+	}
+	#newsletter-promo .triangle{
+  	margin: 0 0 0 60px;
+	}
+	#newsletter-promo .box{
+		/*margin: 50px 0;*/
+  	/*padding:30px 15% 30px 15%; */
+	}
+	#newsletter-promo .box h3{
+		font-size: 24px;
+	}
+	#newsletter-promo .box h3 span {
+  	display: block;
+	}
+	#newsletter-promo .box .mailing-list-box input{
+		width:auto;
+	}
+	#newsletter-promo .box .mailing-list-box .email{
+  	width:444px;
+	}	
+	#editor-tools{display: block;}
+	.mission-txt{
+		margin-top: 15px;
+	}
+}
+
+/*
+Tablets/desktops and up
+MD
+*/
+@media screen and (min-width: 992px) {
+	.entry{
+		/*padding:30px 15% 30px 15%;*/
+	}
+	
+}
+
+
+/*
+Large desktops and up
+LG
+*/
+@media screen and (min-width: 1200px) {
+
+}

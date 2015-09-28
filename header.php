@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
-    <title><?php wp_title( '|', true, 'right' ); ?><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></title>
+    <title><?php wp_title( '|', true, 'right' ); ?>Global News &amp; Commentary | Yonder</title>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
     <!-- Open Graph Tags -->
@@ -12,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Typekit -->
-    <script src="//use.typekit.net/njv8ctg.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    <script src="https://use.typekit.net/uhe5gkd.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- Fonts: Lato / http://www.latofonts.com/ -->
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
