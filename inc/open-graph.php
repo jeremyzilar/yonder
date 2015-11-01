@@ -52,17 +52,6 @@
     <meta name="description" content="$description" />
     <meta name="keywords" content="$keywords" />
 
-    <!-- Facbook -->
-    <meta property="og:type" content="$type" />
-    <meta property="og:title" content="$the_title" />
-    <meta property="og:description" content="$description" />
-    <meta property="og:url" content="$permalink" />
-    <meta property="og:site_name" content="$sitename" />
-    $thumbnail
-    <meta property="og:image" content="$yonderlogo" />
-    <meta property="og:image" content="$andrej" />
-    
-
     <!-- Twitter -->
     <link rel="me" href="https://twitter.com/$twitter" />
     <meta name="twitter:card" content="summary_large_image">

@@ -23,9 +23,6 @@ $inc = $root . '/inc/';
 define('INC', $inc);
 
 
-// Removes JetPack Open Graph tags
-add_filter( 'jetpack_enable_open_graph', '__return_false' );
-
 
 function yonder_setcookie() {
   // setcookie( 'yonder_newvisitor', 'my-value', time() + 3600, COOKIEPATH, COOKIE_DOMAIN );
