@@ -324,3 +324,14 @@ function yonder_feed($feed_type = null) {
 }
 add_filter('the_content_feed', 'yonder_feed');
 
+
+
+// display featured post thumbnails in WordPress feeds
+function wcs_post_thumbnails_in_feeds( $content ) {
+    global $post;
+    if( has_post_thumbnail( $post->ID ) ) {
+      $content = '<media:content url="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) .'" medium="image" /> ' . $content;
+    }
+    return $content;
+}
+add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
