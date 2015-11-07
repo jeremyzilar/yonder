@@ -292,17 +292,6 @@ function newsletter_feed_filter($content) {
 
 
 
-// function featuredtoRSS($content) {
-//   global $post;
-//   if ( has_post_thumbnail( $post->ID ) ){
-//     $content = '' . get_the_post_thumbnail( $post->ID, 'large', array( 'style' => 'margin:0;', 'class' => 'emailImage' ) ) . '' . $content;
-//   }
-//   return $content;
-// }
-
-// add_filter('the_excerpt_rss', 'featuredtoRSS');
-// add_filter('the_content_feed', 'featuredtoRSS');
-
 
 
 function modify_read_more_link() {
@@ -330,19 +319,9 @@ add_filter('the_content_feed', 'yonder_feed');
 function wcs_post_thumbnails_in_feeds( $content ) {
     global $post;
     if( has_post_thumbnail( $post->ID ) ) {
-      $content = '<media:content url="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) .'" medium="image" /> ' . $content;
+      $content = '<img src="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) .'" style="width:100%;" /> ' . $content;
     }
     return $content;
 }
-// add_filter( 'the_excerpt_rss', 'wcs_post_thumbnails_in_feeds' );
+add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
 
-
-// Custom Newsletter Feed
-// add_action('init', 'yonder_newsletter_feed');
-// function yonder_newsletter_feed(){
-//   add_feed('newsletterfeed', 'yonder_newsletter_func');
-// }
-
-// function yonder_newsletter_func(){
-//   get_template_part('rss', 'newsletter');
-// }
