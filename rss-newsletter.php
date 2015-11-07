@@ -42,7 +42,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
       <guid isPermaLink="false"><?php the_guid(); ?></guid>
       <description><![CDATA[<?php the_excerpt_rss() ?>]]></description>
       <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-email-thumb' ); $url = $thumb['0'];?>
-      <![CDATA[<media:content url='<?=$url?>' type='image/jpeg' width='580'/>]]>
+      <media:content url='<?=$url?>' type='image/jpeg' width='600'/>
       <content:encoded><![CDATA[<?php the_content_feed() ?>]]></content:encoded>
       <?php rss_enclosure(); ?>
       <?php do_action('rss2_item'); ?>
