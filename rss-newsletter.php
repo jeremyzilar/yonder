@@ -40,9 +40,15 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
       <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
       <dc:creator><?php the_author(); ?></dc:creator>
       <guid isPermaLink="false"><?php the_guid(); ?></guid>
-      <description><![CDATA[<?php the_excerpt_rss() ?>]]></description>
-      <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-email-thumb' ); $url = $thumb['0'];?>
-      <media:content url='<?=$url?>' type='image/jpeg' width='600'/>
+      
+      <?php
+        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-email-thumb' );
+        $photo = '<img src="'.$thumb['0'].'" alt="" width="600px" />';
+
+      ?>
+
+      <description><![CDATA[<?php echo $photo ?> <?php the_excerpt_rss() ?>]]></description>
+      
       <content:encoded><![CDATA[<?php the_content_feed() ?>]]></content:encoded>
       <?php rss_enclosure(); ?>
       <?php do_action('rss2_item'); ?>
