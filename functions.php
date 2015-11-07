@@ -334,5 +334,4 @@ function wcs_post_thumbnails_in_feeds( $content ) {
     }
     return $content;
 }
-add_filter( 'the_excerpt_rss', 'wcs_post_thumbnails_in_feeds' );
 add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
