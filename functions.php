@@ -334,6 +334,15 @@ function wcs_post_thumbnails_in_feeds( $content ) {
     }
     return $content;
 }
-add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
+// add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
 
 
+// Custom Newsletter Feed
+add_action('init', 'yonder_newsletter_feed');
+function yonder_newsletter_feed(){
+  add_feed('newsletterfeed', 'yonder_newsletter_func');
+}
+
+function yonder_newsletter_func(){
+  get_template_part('rss', 'newsletter');
+}
