@@ -330,7 +330,7 @@ add_filter('the_content_feed', 'yonder_feed');
 function wcs_post_thumbnails_in_feeds( $content ) {
     global $post;
     if( has_post_thumbnail( $post->ID ) ) {
-      $content = '<media:content url="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)); .'" medium="image" />';
+      $content = '<media:content url="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) .'" medium="image" />';
     }
     return $content;
 }
