@@ -335,3 +335,5 @@ function wcs_post_thumbnails_in_feeds( $content ) {
     return $content;
 }
 add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
+
+
