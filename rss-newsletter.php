@@ -43,7 +43,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
       
       <?php
         $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'my-email-thumb' );
-        $photo = '<img src="'.$thumb['0'].'" alt="" width="600px" />';
+        $photo = '<img src="'.$thumb['0'].'" alt="" style="width:100%;" />';
 
       ?>
 
