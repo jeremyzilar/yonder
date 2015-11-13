@@ -660,3 +660,14 @@ section{
 #menu-footer li a{
   padding: 5px 10px;
 }
+
+#infinite-handle{
+  margin-bottom: 60px !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  .btn{
+    margin-left: 16px;
+    background: #DD514E;
+    color: #fff;
+  }
+}

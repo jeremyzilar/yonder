@@ -81,10 +81,10 @@
 
     // Infinite Scroll — brought to you by Jet Pack plugin.
     // Adding classes to existing markup to help style the 'load more' button
-    // var $infinite_handle = $('#infinite-handle');
-    // var $infinite_handle_label = $infinite_handle.find('span');
-    // $infinite_handle.addClass('container').wrapInner('<div class="row" />');
-    // $infinite_handle_label.wrap('<div class="doc col-lg-7 col-md-8 col-sm-9 col-md-offset-2 col-sm-offset-3" />').addClass('btn').text('show more');
+    var $infinite_handle = $('#infinite-handle');
+    var $infinite_handle_label = $infinite_handle.find('span');
+    $infinite_handle.addClass('container').wrapInner('<div class="row" />');
+    $infinite_handle_label.wrap('<div class="" />').addClass('btn').text('show more');
 
   });
 
