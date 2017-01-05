@@ -215,8 +215,11 @@ function get_newsletter_link(){
 
 
 function wp_get_attachment( $attachment_id ) {
+  global $post;
   $attachment = get_post( $attachment_id );
-  return array(
+  // $foo = wp_get_attachment_metadata( $attachment_id);
+  // print_r($foo);
+  $varrrr = array(
     'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
     'caption' => $attachment->post_excerpt,
     'description' => $attachment->post_content,
@@ -224,6 +227,8 @@ function wp_get_attachment( $attachment_id ) {
     'src' => $attachment->guid,
     'title' => $attachment->post_title
   );
+  // print_r($varrrr);
+  return $varrrr;
 }
 
 
@@ -234,21 +239,21 @@ function andrej_featured_media($size) {
     $thumb = preg_replace( '/(width|height)="\d*"\s/', "", $thumb ); // Removes height & width
     $thumb = str_replace( 'class="', 'class="img-responsive ', $thumb );
     $img_id = get_post_thumbnail_id($post->ID);
-    $attachment_meta = wp_get_attachment($img_id);
-    
-    $alt = 'Yonder News, by Andrej Mrevlje';
-    $caption = $attachment_meta['caption'];
-    if (!empty($caption)) {
-      $caption = '<span class="caption">'.$caption.'</span>';
-      $alt = $caption . ' | Yonder News, by Andrej Mrevlje';
-    }
+    if ( wp_attachment_is_image( $img_id ) ) {
+      $attachment_meta = wp_get_attachment($img_id);
+      $alt = 'Yonder News, by Andrej Mrevlje';
+      $caption = $attachment_meta['caption'];
+      if (!empty($caption)) {
+        $caption = '<span class="caption">'.$caption.'</span>';
+        $alt = $caption . ' | Yonder News, by Andrej Mrevlje';
+      }
 
-    if (is_single()) {
-      return '<div class="photo '.$size.'">' . $thumb . '' . $caption . ' </div>';
-    } else {
-      return '<div class="photo '.$size.'"><a href="' . get_permalink() . '">' . $thumb . '</a>'.$caption.'</div>';
+      if (is_single()) {
+        return '<div class="photo '.$size.'">' . $thumb . '' . $caption . ' </div>';
+      } else {
+        return '<div class="photo '.$size.'"><a href="' . get_permalink() . '">' . $thumb . '</a>'.$caption.'</div>';
+      }
     }
-    
   }
 }
 
