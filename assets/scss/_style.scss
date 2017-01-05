@@ -111,40 +111,21 @@ section{
 
 /*HEAD*/
 #head{
-  padding: 60px 0 60px 0;
+  padding: 21px 5px;
   background: #444;
-  background: #F16B6D;
-  background: #F74B53;
-  background: #E25D64;
-  background: #E0685F;
   background: #DD514E;
-  /*background: #FF3E4C;*/
-  /*background: #f15849;*/
-  /*background: #f14d3e;*/
   color:#fff;
 }
-#head .blue{
-  margin: 0;
-  padding: 20px 0;
-  background: #228ff1;
-  background: #5098f1;
-  /*background: #76a9f1;*/
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: none;
-}
 #head .logo{
-  margin-left: -5px;
-  margin-bottom: 10px;
-  width: 150px;
+  width: 130px;
 }
 #head h1{
-  margin:0 0 50px 0;
+  margin:0;
+  padding-left: 3px;
   font-weight: 500;
-  font-size: 68px;
+  font-size: 58px;
   font-family: "livory";
-  line-height: 75px;
+  line-height: 55px;
   text-transform: lowercase;
 }
 #head h1 a{
@@ -153,16 +134,13 @@ section{
 #head h1 a:hover{
   text-decoration: none;
 }
-#head h2 {
-  margin:0 0 18px 0;
-  font-weight: 700;
-  font-size: 36px;
-}
 #head h3 {
-  margin:0;
+  margin:3px 0 0 0;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 35px;
+  font-size: 16px;
+  line-height: 21px;
+  width: 186px;
+  text-align: right;
 }
 #head h3 span{
   display: block;
