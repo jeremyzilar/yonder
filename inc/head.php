@@ -9,6 +9,12 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-xs-12">
+        <?php include(INC . '/navbar.php'); ?>
+      </div>
+    </div>
+
   </div>
 
 </section>
