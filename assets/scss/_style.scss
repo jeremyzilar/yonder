@@ -2,6 +2,13 @@
 font-family: 'Lato', sans-serif;
 */
 
+/*Break Points*/
+$break-xs: "screen and (max-width: 767px)";
+$break-sm: "screen and (min-width: 768px)";
+$break-md: "screen and (min-width: 992px)";
+$break-lg: "screen and (min-width: 1200px)";
+
+
 body {
   background: #F8F7EE;
   font-family: 'Lato', sans-serif;
@@ -72,6 +79,9 @@ section{
 
 ul.navbar{
   margin: 20px 0 0 0;
+  @media #{$break-sm} {
+    margin-top: 35px;
+  }
   padding: 0;
   min-height: auto;
   list-style-type: none;
@@ -82,18 +92,26 @@ ul.navbar{
     padding-right:15px;
     padding-bottom:15px;
     font-size: 14px;
+    @media #{$break-sm} {
+      font-size: 16px;
+    }
     font-weight: 400;
     display: inline-block;
+    -webkit-transition: all 0.15s ease-in-out;
+       -moz-transition: all 0.15s ease-in-out;
+         -o-transition: all 0.15s ease-in-out;
+            transition: all 0.15s ease-in-out;
     a{
       color:#fff !important;
-      -webkit-transition: all 0.15s ease-in-out;
-         -moz-transition: all 0.15s ease-in-out;
-           -o-transition: all 0.15s ease-in-out;
-              transition: all 0.15s ease-in-out;
     }
     a:hover{
-      background: rgba(255,255,255,.2) !important;
+      // background: rgba(255,255,255,.2) !important;
+      border-bottom: 2px #fff solid;
+      text-decoration: none;
     }
+  }
+  li:hover{
+    // border-bottom: 2px #fff solid;
   }
 }
 
@@ -115,6 +133,9 @@ ul.navbar{
 }
 #head .logo{
   width: 130px;
+  @media #{$break-sm} {
+    width: 155px;
+  }
 }
 #head h1{
   margin:0;
@@ -124,6 +145,9 @@ ul.navbar{
   font-family: "livory";
   line-height: 55px;
   text-transform: lowercase;
+  @media #{$break-sm} {
+    font-size: 70px;
+  }
 }
 #head h1 a{
   color:#fff;
@@ -131,6 +155,7 @@ ul.navbar{
 #head h1 a:hover{
   text-decoration: none;
 }
+
 #head h3 {
   margin:3px 0 0 0;
   font-weight: 300;
@@ -138,6 +163,11 @@ ul.navbar{
   line-height: 21px;
   width: 186px;
   text-align: right;
+  @media #{$break-sm} {
+    margin-top:8px;
+    width: 225px;
+    font-size: 20px;
+  }
 }
 #head h3 span{
   display: block;
