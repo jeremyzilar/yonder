@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
 
-	<?php date_marker(); ?>
+	<?php //date_marker(); ?>
 
 	<header class="entry-header">
 
