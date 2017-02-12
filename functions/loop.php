@@ -5,14 +5,12 @@ function loop(){
 	global $wp_query;
 	$i = 0;
 	$start = <<< EOF
-<div class="container">
 	<div class="row">
-		<div class="col-xs-12 col-sm-10">
+		<div class="col-xs-12 col-sm-11 col-md-9">
 EOF;
 	$end = <<< EOF
 		</div>
 	</div>
-</div>
 EOF;
 	$day_check = '';
 	if ( have_posts() ) {

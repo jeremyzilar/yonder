@@ -5,7 +5,7 @@
 			'menu_class'      => 'navbar',
 			'menu_id'         => '',
 			'container'       => 'div',
-			'container_class' => 'nav-wrap col-xs-12',
+			'container_class' => 'nav-wrap ',
 			'container_id'    => '',
 			'echo'            => true,
 			'before'          => '',

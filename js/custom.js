@@ -56,7 +56,12 @@
     };
     realTime('.entry .rel_time span');
     realTime('.item .rel_time span');
-		
+	
+    $('.tags-list a').each(function(){
+      var text = $(this).html();
+      text = text.replace(" ", "&#160;");
+      $(this).html(text);
+    });
 
     // Twitter Button - - - - - - - - - - - - - - - - - - - - -
     $('.btn-twitter').click(function(e) {

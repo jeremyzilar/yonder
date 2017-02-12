@@ -11,6 +11,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/img\/andrej-2017.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16147,
+		"inputAbbreviatedPath": "\/assets\/img\/andrej-2017.jpeg",
+		"outputAbbreviatedPath": "\/assets\/img\/andrej-2017.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/andrej-sq-250.png": {
 		"fileType": 32768,
 		"ignore": 0,
