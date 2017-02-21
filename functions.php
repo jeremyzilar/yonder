@@ -330,3 +330,14 @@ function wcs_post_thumbnails_in_feeds( $content ) {
 }
 add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
 
+function set_wp_generate_tag_cloud($content, $tags, $args){ 
+  $count=0;
+  $output=preg_replace_callback('(</a\s*>)', 
+  function($match) use ($tags, &$count) {
+      return " <span class=\"tagcount\">".$tags[$count++]->count."</span></a>";  
+  }
+  , $content);
+  
+  return $output;
+}
+add_filter('wp_generate_tag_cloud','set_wp_generate_tag_cloud', 10, 3); 

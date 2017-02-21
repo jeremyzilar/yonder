@@ -6,7 +6,7 @@
 
 		<?php andrej_the_kicker(); ?>
 
-		<?php if ( is_single() ) : ?>
+		<?php if ( is_singular() ) : ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php else : ?>
 		<h3 class="entry-title">
@@ -16,24 +16,23 @@
 
 
 		<?php
-		  $author = get_the_author();
-		  $author_user = get_the_author_meta( 'user_login' );
-		  $author_link = get_author_posts_url(get_the_author_meta( 'ID' ));
+			if (!is_page()) {
+			  $author = get_the_author();
+			  $author_user = get_the_author_meta( 'user_login' );
+			  $author_link = get_author_posts_url(get_the_author_meta( 'ID' ));
 
-			echo '<div class="author_date">By '.$author.' | ';
+				echo '<div class="author_date">By '.$author.' | ';
 
-			andrej_entry_date();
+				andrej_entry_date();
 
-			if ( is_user_logged_in() ) {
-				$edit = get_edit_post_link($id);
-				echo ' | <a href="'.$edit.'" class="btn-edit"><i class="fa fa-pencil"></i> edit</a>';
+				if ( is_user_logged_in() ) {
+					$edit = get_edit_post_link($id);
+					echo ' | <a href="'.$edit.'" class="btn-edit"><i class="fa fa-pencil"></i> edit</a>';
+				}
+
+			  echo '</div>';
 			}
-
-		  echo '</div>';
 		?>
-
-
-
 
 		<?php echo andrej_featured_media('large'); ?>
 		

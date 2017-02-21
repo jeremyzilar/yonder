@@ -7,12 +7,18 @@
 		"uuidString": "2718A8E5-4940-432D-B44D-E994A05CBDE9"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "25504",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/.gitignore",
+		"oF": 0
+		},
+	"\/archive.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/archive.php",
 		"oF": 0
 		},
 	"\/assets\/css\/main.min.css": {
@@ -3404,6 +3410,12 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
+	"\/content-archive.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/content-archive.php",
+		"oF": 0
+		},
 	"\/content.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -3524,10 +3536,28 @@
 		"oAP": "\/inc\/open-graph.php",
 		"oF": 0
 		},
+	"\/inc\/opengraph.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/opengraph.php",
+		"oF": 0
+		},
+	"\/inc\/search-bar.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/search-bar.php",
+		"oF": 0
+		},
 	"\/inc\/social.php": {
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/social.php",
+		"oF": 0
+		},
+	"\/inc\/tag-cloud.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/tag-cloud.php",
 		"oF": 0
 		},
 	"\/index.php": {
@@ -3642,6 +3672,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/rss-newsletter.php",
+		"oF": 0
+		},
+	"\/search.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/search.php",
 		"oF": 0
 		},
 	"\/sidebar.php": {
@@ -4323,6 +4359,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -4862,6 +4902,10 @@
 		"prefer-const": {
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
+			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
 		"prefer-numeric-literals": {
 			"active": 0,

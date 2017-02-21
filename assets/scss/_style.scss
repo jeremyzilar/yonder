@@ -1,7 +1,3 @@
-/*FONTS
-font-family: 'Lato', sans-serif;
-font-family: 'Libre Baskerville', serif;
-*/
 
 /*Break Points*/
 $break-xs: "screen and (max-width: 767px)";
@@ -11,18 +7,27 @@ $break-lg: "screen and (min-width: 1200px)";
 
 // Colors
 $dark: #162C40;
+$dark-blue: #335B81;
 $red: #DD514E;
+$btn-blue: #6A88E5;
+
+// Type:
+$sans: 'Lato', sans-serif;
+$serif: 'freight-text-pro', 'Palentino', Georgia, serif;
+
+// ----------------------
 
 body {
   background: #F8F7EE;
-  font-family: 'Lato', sans-serif;
+  font-family: $sans;
   font-size: 18px;
   color:$dark;
   /* Rectangle: */
   // opacity: 0.7;
-  background-image: -webkit-linear-gradient(left, #F8F0CF 0%, #D7DAC1 100%);
-  background-image: -o-linear-gradient(left, #F8F0CF 0%, #D7DAC1 100%);
-  background-image: linear-gradient(to right, #F8F0CF 0%, #D7DAC1 100%);
+  background-image: -webkit-linear-gradient(left, rgba(248,240,207,0.70) 0%, rgba(215,218,193,0.70) 100%);
+  background-image: -o-linear-gradient(left, rgba(248,240,207,0.70) 0%, rgba(215,218,193,0.70) 100%);
+  background-image: linear-gradient(to right, rgba(248,240,207,0.70) 0%, rgba(215,218,193,0.70) 100%);
+
 
   a{
     color:$red;
@@ -61,7 +66,7 @@ h4 {
 }
 
 h5{
-  font-family: 'Lato', sans-serif;
+  font-family: $sans;
 }
 h6 {
   margin:0 0 15px 0;
@@ -162,6 +167,8 @@ ul.navbar{
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
+    color:$dark-blue;
+    text-shadow:none;
 
     @media #{$break-sm} {
       margin-top:35px;
@@ -183,6 +190,8 @@ ul.navbar{
       display: block;
       font-weight: 300;
       font-style: italic;
+      font-size: 21px;
+      line-height: 28px;
     }
   }
   .yonder-newsletter-box{
@@ -204,6 +213,7 @@ ul.navbar{
     .newsletter-msg{
       font-size: 16px;
       font-style: italic;
+      color:$red;
       @media #{$break-sm} {
         font-size: 18px;
       }
@@ -228,11 +238,11 @@ ul.navbar{
         border:none;
         width: 100%;
         @media #{$break-sm} {
-          width: 208px;
+          width: 160px;
         }
       }
       .btn-submit{
-        background: #6A88E5;
+        background: $btn-blue;
         color:#fff;
         -webkit-transition: all 0.15s ease-in-out;
            -moz-transition: all 0.15s ease-in-out;
@@ -263,7 +273,7 @@ ul.navbar{
 
 
 /*ENTRY // Blog Posts*/
-#blog{
+#main{
   margin:0;
   padding:0;
   .container{
@@ -271,7 +281,7 @@ ul.navbar{
     padding-top: 45px;
     padding-bottom: 20px;
     @media #{$break-sm} {
-      padding-top: 62px;
+      padding-top: 50px;
     }
   }
   .container:last-child{
@@ -289,9 +299,8 @@ ul.navbar{
 .date-hed h5{
   margin: 0;
   color:#777;
-  font-family: 'Lato', sans-serif;
+  font-family: $sans;
   text-transform: uppercase;
-  /*font-family: 'freight-text-pro', 'Palentino', Georgia, serif;*/
 }
 .date-hed h5 a{
   /*color:#90A0D6;*/
@@ -301,18 +310,18 @@ ul.navbar{
   margin:0 0 60px 0;
   padding:0; 
   color:$dark;
-  font-family: 'freight-text-pro', 'Palentino', Georgia, serif;
+  font-family: $serif;
   @media #{$break-sm} {
     margin:0 0 96px 0;
   }
 }
 .entry .kicker{
-  margin:0 0 10px 0;
+  margin:0 0 5px 0;
   font-size:14px;
   font-weight:400;
-  font-family: 'Lato', sans-serif;
+  font-family:$sans;
   @media #{$break-sm} {
-    margin:0 0 15px 0;
+    margin:0 0 5px 0;
   }
 }
 .entry .kicker a,
@@ -321,16 +330,16 @@ ul.navbar{
 }
 .entry-title{
   margin-top:0;
-  margin-bottom:8px;
+  margin-bottom:12px;
   font-size:24px;
   line-height:32px;
-  font-family: 'Libre Baskerville', serif;
+  font-family: $serif;
   font-weight:400;
   color:$dark;
   text-shadow:none;
   @media #{$break-sm} {
-    font-size:30px;
-    line-height:40px;
+    font-size:36px;
+    line-height:42px;
   }
   a{
     color:$dark;
@@ -341,7 +350,8 @@ ul.navbar{
             transition: all 0.15s ease-in-out;
   }
   a:hover{
-    /*text-decoration: underline;*/
+    color:$dark;
+    // /*text-decoration: underline;*/
   }
 }
 .entry .entry-summary p{
@@ -349,6 +359,8 @@ ul.navbar{
 }
 .entry-summary .more{
   display: block;
+  font-family: $sans;
+  font-size: 18px;
 }
 .single .entry-summary,
 .page .entry-summary{
@@ -382,26 +394,25 @@ ul.navbar{
     margin-bottom: 10px;
   }
   blockquote{
-    padding: 10px 40px;
+    padding: 10px 55px;
     border-left:none;
   }
 }
 
 
 
-
 .author_date{
   margin-bottom: 25px;
   font-size:14px;
-  color:#686868;
-  font-family: 'Lato', sans-serif;
+  color:$dark-blue;
+  font-family: $sans;
 }
 
 
 /*Draft Posts*/
 .status-label{
   margin-right:3px;
-  font-family: 'Lato', sans-serif;
+  font-family: $sans;
   text-transform:uppercase;
   font-size:13px;
 }
@@ -416,7 +427,7 @@ ul.navbar{
   margin-bottom:0;
   color:#b9b5b5;
   color:#9c9999;
-  font-family: 'Lato', sans-serif;
+  font-family: $sans;
 }
 
 .archive-title{
@@ -488,7 +499,7 @@ ul.navbar{
 /*IMAGES*/
 .photo{
   margin-bottom:21px;
-  font-family: 'Lato', sans-serif;
+  font-family: $sans;
 }
 .photo img{
   margin-bottom:2px;
@@ -560,6 +571,91 @@ ul.navbar{
   font-size: 21px;
   font-weight: 300;
 }
+
+
+// Search
+.page-template-search{
+  #search-area{
+    margin-bottom: 140px;
+  }
+  #tag-cloud {
+    a{
+      margin-bottom:7px;
+      display: inline-block;
+      color:#fff;
+      background-color: rgba(221,81,78,.65);
+      border-radius: 15px;
+      border-bottom: none;
+      font-weight: 300;
+    }
+    a:hover{
+      background-color: rgba(221,81,78,1);
+    }
+    .tagcount{
+      display: none;
+    }
+  }
+}
+#search-area{
+  padding: 20px 0 0 0;
+  .results_num{
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    color:#777;
+  }
+  label{
+    padding: 0;
+  }
+  button{
+    background: $btn-blue;
+    border-color: rgba(106, 136, 229, .5);
+  }
+}
+
+#tag-cloud{
+  margin: 20px 0;
+  a{
+    margin-bottom:1px;
+    padding: 3px 13px 5px 13px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px #ccc solid;
+    display: block;
+    -webkit-transition: background-color 0.2s ease-in-out;
+       -moz-transition: background-color 0.2s ease-in-out;
+         -o-transition: background-color 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out;
+  }
+  a:hover{
+    // background-color: rgba(221,81,78,1);
+  }
+  .tagcount{
+    float: right;
+  }
+}
+
+.archive, .search {
+  .entry{
+    margin-bottom: 36px;
+    .kicker{
+      margin-bottom: 10px;
+    }
+    .entry-title{
+      font-size: 24px;
+      line-height:30px;
+    }
+    .entry-summary{
+      font-size: 18px;
+      line-height: 24px;
+      .more{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
 
 /*Footer*/
 #footer{
