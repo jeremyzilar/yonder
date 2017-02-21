@@ -16,10 +16,12 @@
     $description = esc_attr( get_bloginfo( 'description', 'display' ) );
     $the_content = '';
     $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
+    $headline = '';
+    $thumbnail = '';
   } else {
     $type = 'article';
     $permalink = esc_url( get_permalink($post->ID) );
-    $headline = get_the_title();
+    $headline = '<meta property="og:title" content="'.get_the_title().'" />';
     $description = get_the_excerpt();
     $the_content = get_the_content();
     $keywords = '';
@@ -32,17 +34,17 @@
     } else {
       $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
     }
-  }
-
-  $thumbnail = '';
-  if ( function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID) ) {
-    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-    if (empty($thumbnail)) {
-      $thumbnail = '';
-    } else {
-      $thumbnail = '<meta property="og:image" content="'.$thumbnail['0'].'" />';
+    $thumbnail = '';
+    if ( function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID) ) {
+      $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+      if (empty($thumbnail)) {
+        $thumbnail = '';
+      } else {
+        $thumbnail = '<meta property="og:image" content="'.$thumbnail['0'].'" />';
+      }
     }
   }
+
 
   $yonderlogo = THEME . '/img/yonder-sq-250.png';
   $andrej = THEME . '/img/andrej-sq-250.png';
@@ -55,7 +57,7 @@
 
     <!-- Facbook -->
     <meta property="og:type" content="$type" />
-    <meta property="og:title" content="$headline" />
+    $headline
     <meta property="og:description" content="$description" />
     <meta property="og:url" content="$permalink" />
     <meta property="og:site_name" content="$sitename" />
