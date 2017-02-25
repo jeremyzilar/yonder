@@ -12,8 +12,6 @@ function loop(){
 	    } else {
 				get_template_part('content', '');
 	    }
-	    
 	  } // end while
 	} // end if
 }
-

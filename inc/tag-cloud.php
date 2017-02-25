@@ -6,7 +6,7 @@
     'smallest'                  => 14, 
     'largest'                   => 14,
     'unit'                      => 'px', 
-    'number'                    => 40,  
+    'number'                    => 45,  
     'format'                    => 'flat',
     'separator'                 => "\n",
     'orderby'                   => 'count', 

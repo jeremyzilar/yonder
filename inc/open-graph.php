@@ -7,8 +7,9 @@
   $sitename = esc_attr( get_bloginfo( 'name', 'display' ) );
   $twitter = 'yondernews';
   
-
+  global $post;
   setup_postdata( $post );
+  $postid = get_the_ID();
 
   if ( is_home() || is_archive() ) {
     $type = 'website';
@@ -20,10 +21,9 @@
     $thumbnail = '';
   } else {
     $type = 'article';
-    $permalink = esc_url( get_permalink($post->ID) );
+    $permalink = esc_url( get_permalink($postid) );
     $headline = '<meta property="og:title" content="'.get_the_title().'" />';
     $description = get_the_excerpt();
-    $the_content = get_the_content();
     $keywords = '';
     $posttags = get_the_tags();
     if ($posttags) {
@@ -35,8 +35,8 @@
       $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
     }
     $thumbnail = '';
-    if ( function_exists('has_post_thumbnail') && has_post_thumbnail($post->ID) ) {
-      $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+    if ( function_exists('has_post_thumbnail') && has_post_thumbnail($postid) ) {
+      $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($postid), 'full' );
       if (empty($thumbnail)) {
         $thumbnail = '';
       } else {
@@ -48,7 +48,6 @@
 
   $yonderlogo = THEME . '/img/yonder-sq-250.png';
   $andrej = THEME . '/img/andrej-sq-250.png';
-
 
   echo <<< EOF
 
@@ -73,5 +72,3 @@
     <meta name="twitter:description" content="$description">
     
 EOF;
-
-

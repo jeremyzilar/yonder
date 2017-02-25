@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
-    <title><?php wp_title( '|', true, 'right' ); ?>Global News &amp; Commentary | Yonder</title>
+    <?php if ( is_home() ) { ?>
+    <title>Yonder — Global News &amp; Commentary<?php wp_title( '|', true, 'right' ); ?></title>
+    <?php } else { ?>
+    <title><?php wp_title( '|', true, 'right' ); ?>Yonder — Global News &amp; Commentary</title>
+    <?php } ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
     <!-- Open Graph Tags -->
