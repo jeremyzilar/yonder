@@ -452,21 +452,27 @@ ul.navbar{
           transition: background-color 0.2s ease-in-out;
 }
 .tags-list a:hover{
-  background-color: rgba(221,81,78,1);
+  color: white;
+  text-decoration: none;
+  background-color: rgba(221,81,78,.95);
 }
 
 .share-buttons{
   display: block;
   font-size: 18px;
+  a{
+    padding: 5px 25px;
+    color:#fff;
+    -webkit-transition: background-color 0.15s ease-in-out;
+       -moz-transition: background-color 0.15s ease-in-out;
+         -o-transition: background-color 0.15s ease-in-out;
+            transition: background-color 0.15s ease-in-out;
+  }
+  a:hover{
+    color:#fff;
+  }
 }
-.share-buttons a{
-  padding: 5px 25px;
-  color:#fff;
-  -webkit-transition: background-color 0.15s ease-in-out;
-     -moz-transition: background-color 0.15s ease-in-out;
-       -o-transition: background-color 0.15s ease-in-out;
-          transition: background-color 0.15s ease-in-out;
-}
+
 
 
 .twitter-share{
@@ -721,8 +727,12 @@ ul.navbar{
   padding-top:0 !important;
   padding-bottom:0 !important;
   .btn{
-    margin-left: 16px;
-    background: $red;
+    background: rgba(221,81,78,.65);
     color: #fff;
+  }
+  .btn:hover{
+    background: rgba(221,81,78,.95);
+    color: #fff;
+    text-decoration: none;
   }
 }
