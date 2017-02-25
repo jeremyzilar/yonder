@@ -726,6 +726,26 @@ ul.navbar{
   margin-bottom: 60px !important;
   padding-top:0 !important;
   padding-bottom:0 !important;
+  button{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   .btn, button{
     background: rgba(221,81,78,.65);
     color: #fff;
