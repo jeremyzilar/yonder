@@ -52,9 +52,10 @@ add_filter('show_admin_bar', '__return_false');
 
 // WP Theme Supports
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image',  'video', 'audio', 'chat', 'status', 'quote', 'link') );
+
 add_theme_support( 'infinite-scroll', array(
 	'type'			 		 => 'click',
-	'container' 		 => 'blog',
+	'container' 		 => 'main',
 	'render'  		 	 => 'loop',
 	'footer' => 'page'
 ) );
