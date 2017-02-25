@@ -726,11 +726,11 @@ ul.navbar{
   margin-bottom: 60px !important;
   padding-top:0 !important;
   padding-bottom:0 !important;
-  .btn{
+  .btn, button{
     background: rgba(221,81,78,.65);
     color: #fff;
   }
-  .btn:hover{
+  .btn:hover, button:hover{
     background: rgba(221,81,78,.95);
     color: #fff;
     text-decoration: none;
