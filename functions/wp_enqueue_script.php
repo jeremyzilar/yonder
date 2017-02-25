@@ -60,6 +60,8 @@ function jeherve_remove_all_jp_css() {
   wp_deregister_style( 'gravatar-profile-widget' ); // Gravatar Widget
   wp_deregister_style( 'widget-grid-and-list' ); // Top Posts widget
   wp_deregister_style( 'jetpack-widgets' ); // Widgets
+  wp_deregister_script('wp-mediaelement');
+	wp_deregister_style('wp-mediaelement');
 }
 add_action('wp_print_styles', 'jeherve_remove_all_jp_css' );
 
@@ -67,3 +69,12 @@ add_action('get_header', 'remove_admin_login_header');
 function remove_admin_login_header() {
 	remove_action('wp_head', '_admin_bar_bump_cb');
 }
+
+// REMOVE WP EMOJI
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+add_filter( 'jetpack_enable_open_graph', '__return_false' );
