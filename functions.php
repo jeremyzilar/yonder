@@ -55,7 +55,7 @@ add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image',  'video',
 
 add_theme_support( 'infinite-scroll', array(
 	'type'			 		 => 'click',
-	'container' 		 => 'main',
+	'container' 		 => 'blog',
 	'render'  		 	 => 'loop',
 	'footer' => 'page'
 ) );
