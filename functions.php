@@ -198,6 +198,13 @@ function entry_excerpt(){
   echo $e;
 }
 
+
+function new_excerpt_more( $more ) {
+	return '';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
 function custom_excerpt_length( $length ) {
 	return 35;
 }
