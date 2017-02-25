@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-  <head>
-    <?php if ( is_home() ) { ?>
+  <head><?php if ( is_home() ) { ?>
+
     <title>Yonder — Global News &amp; Commentary<?php wp_title( '|', true, 'right' ); ?></title>
+
     <?php } else { ?>
     <title><?php wp_title( '|', true, 'right' ); ?>Yonder — Global News &amp; Commentary</title>
+
     <?php } ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
+
+    <!-- AMP by PostLight https://mercury.postlight.com/ -->
+    <?php if( is_single() ) { ?>
+    <link rel="amphtml" href="https://mercury.postlight.com/amp?url=<?php echo urlencode(get_the_permalink()); ?>">
+    <?php } ?>
 
     <!-- Open Graph Tags -->
     <?php include INC . 'open-graph.php'; ?>
