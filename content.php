@@ -14,7 +14,6 @@
 		</h3>
 		<?php endif; // is_single() ?>
 
-
 		<?php
 			if (!is_page()) {
 			  $author = get_the_author();
