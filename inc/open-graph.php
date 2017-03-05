@@ -46,8 +46,8 @@
   }
 
 
-  $yonderlogo = THEME . '/img/yonder-sq-250.png';
-  $andrej = THEME . '/img/andrej-sq-250.png';
+  $yonderlogo = THEME . '/assets/img/yonder-sq-500.png';
+  $andrej = THEME . '/assets/img/andrej-2017.jpeg';
 
   echo <<< EOF
 
