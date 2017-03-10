@@ -34,10 +34,6 @@
     } else {
       $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
     }
-
-    $yonderlogo = THEME . '/assets/img/yonder-sq-500.png';
-    $andrej = THEME . '/assets/img/andrej-2017.jpeg';
-    
     $thumbnail = '';
     if ( function_exists('has_post_thumbnail') && has_post_thumbnail($postid) ) {
       $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($postid), 'full' );
@@ -49,8 +45,8 @@
     }
   }
 
-
-  
+  $yonderlogo = THEME . '/assets/img/yonder-sq-500.png';
+  $andrej = THEME . '/assets/img/andrej-2017.jpeg';
 
   echo <<< EOF
 
