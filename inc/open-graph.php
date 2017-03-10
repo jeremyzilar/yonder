@@ -34,22 +34,23 @@
     } else {
       $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
     }
+
+    $yonderlogo = THEME . '/assets/img/yonder-sq-500.png';
+    $andrej = THEME . '/assets/img/andrej-2017.jpeg';
+    
     $thumbnail = '';
-    $twitter_thumbnail = '';
     if ( function_exists('has_post_thumbnail') && has_post_thumbnail($postid) ) {
       $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($postid), 'full' );
       if (empty($thumbnail)) {
         $thumbnail = '';
       } else {
-        $thumbnail = '<meta property="og:image" content="'.$thumbnail['0'].'" />';
-        $twitter_thumbnail = '<meta name="twitter:image" content="'.$thumbnail['0'].'">';
+        $thumbnail = $thumbnail['0'];
       }
     }
   }
 
 
-  $yonderlogo = THEME . '/assets/img/yonder-sq-500.png';
-  $andrej = THEME . '/assets/img/andrej-2017.jpeg';
+  
 
   echo <<< EOF
 
@@ -62,7 +63,7 @@
     <meta property="og:description" content="$description" />
     <meta property="og:url" content="$permalink" />
     <meta property="og:site_name" content="$sitename" />
-    $thumbnail
+    <meta property="og:image" content="$thumbnail" />
     <meta property="og:image" content="$yonderlogo" />
 
     <!-- Twitter -->
@@ -71,7 +72,8 @@
     <meta name="twitter:site" content="@$twitter">
     <meta name="twitter:creator" content="@$twitter">
     <meta name="twitter:title" content="$sitename">
+    <meta name="twitter:image" content="$thumbnail">
     <meta name="twitter:description" content="$description">
-    $twitter_thumbnail
+    
     
 EOF;
