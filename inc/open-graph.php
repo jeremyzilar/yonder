@@ -35,12 +35,14 @@
       $keywords = 'Yonder, Andrej Mrevlje, Global Events, World Events';
     }
     $thumbnail = '';
+    $twitter_thumbnail = '';
     if ( function_exists('has_post_thumbnail') && has_post_thumbnail($postid) ) {
       $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($postid), 'full' );
       if (empty($thumbnail)) {
         $thumbnail = '';
       } else {
         $thumbnail = '<meta property="og:image" content="'.$thumbnail['0'].'" />';
+        $twitter_thumbnail = '<meta name="twitter:image" content="'.$thumbnail['0'].'">';
       }
     }
   }
@@ -70,5 +72,6 @@
     <meta name="twitter:creator" content="@$twitter">
     <meta name="twitter:title" content="$sitename">
     <meta name="twitter:description" content="$description">
+    $twitter_thumbnail
     
 EOF;
