@@ -7,7 +7,7 @@
 		<?php andrej_the_kicker(); ?>
 
 		<?php if ( is_singular() ) : ?>
-		<h1 class="entry-title p-name><?php the_title(); ?></h1>
+		<h1 class="entry-title p-name"><?php the_title(); ?></h1>
 		<?php else : ?>
 		<h3 class="entry-title">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
