@@ -10,14 +10,9 @@
     <?php } ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-    <!-- AMP by PostLight https://mercury.postlight.com/ -->
-    <?php if( is_single() ) { ?>
-    <link rel="amphtml" href="https://mercury.postlight.com/amp?url=<?php echo urlencode(get_the_permalink()); ?>">
-    <?php } ?>
-
     <!-- Open Graph Tags -->
     <?php include INC . 'open-graph.php'; ?>
-    
+
     <link rel="profile" href="http://gmpg.org/xfn/11" />
   	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,5 +42,5 @@
       if ( is_user_logged_in() ) {
         include_once(INC . '/editor-tools.php');
       }
-      
+
     ?>

@@ -108,8 +108,8 @@ if (!is_admin()) {
 function date_marker(){
 	// Date Marker
 	$post_date = the_date('l F j, Y', '', '', FALSE); // returns the_date
-	$year  = get_the_time('Y'); 
-	$month = get_the_time('m'); 
+	$year  = get_the_time('Y');
+	$month = get_the_time('m');
 	$day   = get_the_time('d');
 	$archiveurl = get_day_link( $year, $month, $day );
 	if (!empty($post_date) && !is_page()) {
@@ -333,14 +333,14 @@ function wcs_post_thumbnails_in_feeds( $content ) {
 }
 add_filter( 'the_content_feed', 'wcs_post_thumbnails_in_feeds' );
 
-function set_wp_generate_tag_cloud($content, $tags, $args){ 
+function set_wp_generate_tag_cloud($content, $tags, $args){
   $count=0;
-  $output=preg_replace_callback('(</a\s*>)', 
+  $output=preg_replace_callback('(</a\s*>)',
   function($match) use ($tags, &$count) {
-      return " <span class=\"tagcount\">".$tags[$count++]->count."</span></a>";  
+      return " <span class=\"tagcount\">".$tags[$count++]->count."</span></a>";
   }
   , $content);
-  
+
   return $output;
 }
-add_filter('wp_generate_tag_cloud','set_wp_generate_tag_cloud', 10, 3); 
+add_filter('wp_generate_tag_cloud','set_wp_generate_tag_cloud', 10, 3);
